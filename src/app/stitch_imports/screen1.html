@@ -1,0 +1,511 @@
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SigmaPDV - O Hub de Soluções para sua Empresa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "sigma-orange": "#FF6600",
+                        "sigma-orange-hover": "#e65c00",
+                        "sigma-dark": "#1E272E",
+                        "sigma-light": "#f5f6fA",
+                        "sigma-text": "#1E272E",
+                        "sigma-silver": "#D1D1D1",
+                        "sigma-cyan": "#00E5E5",
+                        "sds-gray": "#f6f6f8",
+                    },
+                    fontFamily: {
+                        "sans": ["Space Grotesk", "sans-serif"],
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    },
+                    animation: {
+                        marquee: 'marquee 40s linear infinite',
+                        marquee2: 'marquee 40s linear infinite',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .mega-menu-trigger:hover .mega-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mega-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .carousel-container {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            display: flex;
+            scroll-behavior: smooth;
+        }
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-slide {
+            scroll-snap-align: start;
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+        }
+        .animate-marquee2 {
+            animation: marquee 40s linear infinite;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 70% 50%, rgba(0, 229, 229, 0.03) 0%, rgba(30, 39, 46, 0) 50%);
+        }
+    </style>
+</head>
+<body class="bg-sigma-light text-sigma-text font-sans antialiased min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-white border-b border-sigma-silver/30 shadow-sm">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+<div class="size-10 bg-sigma-dark rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<span class="text-2xl font-bold tracking-tight text-sigma-dark">Sigma<span class="text-sigma-orange">PDV</span></span>
+</div>
+<nav class="hidden lg:flex space-x-8 items-center h-full">
+<div class="relative group h-full flex items-center mega-menu-trigger">
+<button class="flex items-center gap-1 text-sm font-semibold text-sigma-dark hover:text-sigma-orange transition-colors py-8">
+                        Produtos
+                        <span class="material-symbols-outlined text-lg">keyboard_arrow_down</span>
+</button>
+<div class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-[600px] bg-white shadow-xl rounded-xl border border-gray-100 p-8 grid grid-cols-2 gap-8 z-50">
+<div>
+<h4 class="text-xs font-bold text-sigma-silver uppercase tracking-wider mb-4">Software</h4>
+<ul class="space-y-3">
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Sistema PDV Varejo</a></li>
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Gestão de Restaurantes</a></li>
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Módulos Fiscais</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold text-sigma-silver uppercase tracking-wider mb-4">Hardware</h4>
+<ul class="space-y-3">
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Terminais Touch</a></li>
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Impressoras Térmicas</a></li>
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Leitores de Código de Barras</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="relative group h-full flex items-center mega-menu-trigger">
+<button class="flex items-center gap-1 text-sm font-semibold text-sigma-dark hover:text-sigma-orange transition-colors py-8">
+                        Soluções
+                        <span class="material-symbols-outlined text-lg">keyboard_arrow_down</span>
+</button>
+<div class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-[400px] bg-white shadow-xl rounded-xl border border-gray-100 p-8 z-50">
+<h4 class="text-xs font-bold text-sigma-silver uppercase tracking-wider mb-4">Indústrias</h4>
+<ul class="space-y-3">
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Supermercados</a></li>
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Farmácia &amp; Saúde</a></li>
+<li><a class="block text-sm font-medium text-sigma-dark hover:text-sigma-orange" href="#">Hotelaria</a></li>
+</ul>
+</div>
+</div>
+<a class="text-sm font-semibold text-sigma-dark hover:text-sigma-orange transition-colors" href="#">Suporte</a>
+<a class="text-sm font-semibold text-sigma-dark hover:text-sigma-orange transition-colors" href="#">Parceiros</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center text-sigma-dark hover:text-sigma-orange">
+<span class="material-symbols-outlined">search</span>
+</button>
+<a class="hidden md:inline-flex items-center justify-center px-5 py-2 border border-sigma-dark text-sm font-medium rounded-md text-sigma-dark bg-transparent hover:bg-gray-50 transition-colors" href="#">
+                    Área do Cliente
+                </a>
+<a class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-sigma-orange hover:bg-sigma-orange-hover shadow-lg shadow-sigma-orange/20 transition-all" href="#">
+                    Solicitar Demo
+                </a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center bg-white overflow-hidden hero-gradient">
+<div class="absolute inset-0 opacity-10 grayscale pointer-events-none">
+<div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-sigma-silver/30 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-sigma-cyan/10 rounded-full blur-[100px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-10">
+<div class="space-y-4">
+<h1 class="font-sans flex flex-col leading-tight">
+<span class="text-7xl lg:text-8xl font-black text-sigma-dark tracking-tighter">SigmaPDV</span>
+<span class="text-3xl lg:text-4xl font-semibold text-sigma-dark/80 mt-2">
+                                O <span class="text-sigma-orange">hub</span> de soluções para sua empresa
+                            </span>
+</h1>
+<p class="text-lg text-gray-500 max-w-lg leading-relaxed font-normal">
+                            Unificamos hardware de alta performance e software inteligente para transformar o seu ponto de venda em um centro de excelência.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-5">
+<a class="inline-flex items-center justify-center px-10 py-5 text-base font-bold rounded-xl text-white bg-sigma-orange hover:bg-sigma-orange-hover shadow-2xl shadow-sigma-orange/30 transition-all transform hover:-translate-y-1" href="#">
+                            Começar Agora
+                            <span class="material-symbols-outlined ml-2 text-xl">rocket_launch</span>
+</a>
+<a class="inline-flex items-center justify-center px-10 py-5 text-base font-bold rounded-xl text-sigma-dark bg-white border-2 border-sigma-dark/10 hover:border-sigma-orange/30 hover:text-sigma-orange transition-all" href="#">
+                            Consultar Hardware
+                        </a>
+</div>
+<div class="flex items-center gap-6 pt-6 grayscale opacity-40">
+<span class="text-xs font-bold text-sigma-dark uppercase tracking-widest border-r border-sigma-dark/20 pr-6">Parceiros Elite</span>
+<div class="h-6 w-20 bg-sigma-dark/20 rounded"></div>
+<div class="h-6 w-20 bg-sigma-dark/20 rounded"></div>
+<div class="h-6 w-20 bg-sigma-dark/20 rounded"></div>
+</div>
+</div>
+<div class="relative hidden lg:block h-[600px]">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative z-30 transform -translate-x-12 translate-y-4 hover:scale-[1.02] transition-transform duration-500 cursor-default">
+<div class="bg-sigma-dark p-2 rounded-2xl shadow-2xl border border-white/10">
+<img alt="Interface Sistema PDV" class="rounded-xl w-[380px] h-[280px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9JmwkZh3SUwgcWrTGycKZ7emJW58wSwWPccumlNov0sfe20X0kQnwyj956ds3c-4nFmT8rAB7I5DGBmyiX2BBSQNf_9R4dm9baBBMtK1z4OPZeAjswUitRTxNsvB--z5oryi4QNHf-CJf3giDsp3znNVRWofLU5Rrmtya3cjjD4Ai-pyCFUc6Mcknaf2JSy3nAzbPhjfufJm6DO2Vb11Qjdu8zawIZ6Qpk717jdqCYsjIRbxRqKe-bxt5nj6EOuqurTXr9oKIIt0"/>
+<div class="absolute -top-1 -right-1 w-24 h-24 bg-sigma-cyan/20 blur-2xl rounded-full"></div>
+</div>
+</div>
+<div class="absolute top-10 right-0 z-20 transform translate-x-4 -translate-y-4 rotate-3">
+<div class="bg-white p-3 rounded-2xl shadow-xl border border-gray-100">
+<img alt="Impressora Térmica Premium" class="w-48 h-48 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtjbAq1xJ6xNW9bEa53-pxgx6OuXHes8FF3xZro-zehO5EC4vifcSay_P0tOwHY8kP02ZIQRxcE7IpRtuAkQ-VhnLSM4Vae5gZ0KDItaMCEUGhXJSG0ezG8wYQc2IaSWp6RsU2rp-fQPRqqAykAcM7TYcf2PHvIMtszaux6lIk-pPyRSKBGPaDJKhkceVH3lsqpQV8XQUP0Bt6vc0nyhrNI4xYMzNx1lbIA2NQ7QSETMOQ53AvuFQKlnGLrx_YE2dlVM5QqbSWQGg"/>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-full h-[2px] bg-sigma-cyan shadow-[0_0_15px_#00E5E5]"></div>
+</div>
+</div>
+<div class="absolute bottom-10 right-10 z-40 transform scale-110 -rotate-2">
+<div class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-100 flex flex-col items-center">
+<img alt="Relógio Ponto Henry" class="w-40 h-52 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOPTwKzU3mRbk0yx7fCD6txhA6EO_utpOq16oLAByhXLamS55mvpQW0wwYAp6l5Yw-mRYWD2a3m3I3fOs5Ws5LYLOXKsBXMDIGAgvmdMNB8677SEYLi-8xDsNF_PibaAFtGyf7vC_KGKYaG-rp_NKyrl8ftBUVYr5_QaKXlK8LpvPu5YuptP4G6IIqbTjAmtuUgdUENEod9A0n73Qs7GbJ2hTBGNicw_1q2Xu1O3iHpNE5fvA5pgOPICXkPXh1UNDW7qlyEOnVVmE"/>
+<div class="mt-2 size-2 bg-sigma-cyan rounded-full animate-pulse shadow-[0_0_8px_#00E5E5]"></div>
+</div>
+</div>
+<div class="absolute -top-10 left-10 z-10 opacity-60 scale-90 blur-[1px]">
+<div class="bg-gray-200 p-2 rounded-xl shadow-lg border border-gray-300">
+<img alt="Notebook Gestão" class="w-64 h-44 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkH1omV3HbD1WTLQHfYqehlUIiv5J2njniG3ryzaYCjI0DjKp6BB57d4-ilEo-CsnBMeeT1wFztQ_g71tzaQGwGZC4bZs1LxV_nXE1ZxK3bgALo8Fb7PvLswG2bRvU14YwjlRewPvvG5bp3Sufr8eVOIioZ798OxKmUPKeW5b2DCbcqdyVQMa1lKwUEkaFMh5cJh3C9yiMNd6uJtSw6x2OP8CbN8VvxgXYFHQ-SoJrrAS00-ErF3wDMe8L43k0nFOvRaXlYGbOTkg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Os Pilares do nosso Hub -->
+<section class="py-20 bg-sigma-light border-y border-sigma-silver/20">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-sigma-dark font-sans">Os Pilares do nosso Hub</h2>
+<div class="mt-4 w-16 h-1 bg-sigma-orange mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+<div class="size-16 rounded-2xl bg-sigma-orange/10 flex items-center justify-center text-sigma-orange mb-8 group-hover:bg-sigma-orange group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+</div>
+<h3 class="text-2xl font-bold text-sigma-dark mb-4">Inteligência</h3>
+<p class="text-gray-500 leading-relaxed">Sistemas ERP modulares que automatizam processos, geram insights e garantem total compliance fiscal.</p>
+</div>
+<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+<div class="size-16 rounded-2xl bg-sigma-orange/10 flex items-center justify-center text-sigma-orange mb-8 group-hover:bg-sigma-orange group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">speed</span>
+</div>
+<h3 class="text-2xl font-bold text-sigma-dark mb-4">Performance</h3>
+<p class="text-gray-500 leading-relaxed">Equipamentos robustos de última geração projetados para operações críticas e alto fluxo de vendas.</p>
+</div>
+<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+<div class="size-16 rounded-2xl bg-sigma-orange/10 flex items-center justify-center text-sigma-orange mb-8 group-hover:bg-sigma-orange group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+</div>
+<h3 class="text-2xl font-bold text-sigma-dark mb-4">Confiança</h3>
+<p class="text-gray-500 leading-relaxed">Suporte técnico ágil e consultivo, com intervenção autorizada para manter sua empresa sempre online.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 bg-sigma-light border-y border-gray-200/50 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 lg:px-8 mb-8 text-center">
+<h3 class="text-lg md:text-xl font-medium text-sigma-dark font-sans opacity-90">Marcas e Sistemas que Confiam na Nossa Expertise</h3>
+</div>
+<div class="relative flex overflow-x-hidden group">
+<div class="animate-marquee whitespace-nowrap flex items-center gap-16 md:gap-24 marquee-content hover:[animation-play-state:paused] transition-all duration-300">
+<div class="flex items-center justify-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"><span class="text-2xl font-bold font-sans text-gray-800">ELGIN</span></div>
+<div class="flex items-center justify-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"><span class="text-2xl font-bold font-sans text-gray-800">EPSON</span></div>
+<div class="flex items-center justify-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"><span class="text-2xl font-bold font-sans text-gray-800">BEMATECH</span></div>
+<div class="flex items-center justify-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"><span class="text-2xl font-bold font-sans text-gray-800">TOLEDO</span></div>
+<div class="flex items-center justify-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"><span class="text-2xl font-bold font-sans text-gray-800">ZEBRA</span></div>
+<div class="flex items-center justify-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"><span class="text-2xl font-bold font-sans text-gray-800">GERTEC</span></div>
+<div class="flex items-center justify-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"><span class="text-2xl font-bold font-sans text-gray-800">SWEDA</span></div>
+<div class="flex items-center justify-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"><span class="text-2xl font-bold font-sans text-gray-800">DATALOGIC</span></div>
+</div>
+</div>
+</section>
+<section class="relative bg-sigma-light overflow-hidden group/carousel">
+<button aria-label="Previous Slide" class="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 items-center justify-center w-14 h-14 rounded-full bg-white/80 border border-gray-200 text-sigma-orange backdrop-blur-sm transition-all duration-300 hover:bg-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sigma-orange/50 active:scale-95" onclick="document.querySelector('.carousel-container').scrollBy({left: -window.innerWidth, behavior: 'smooth'})">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</button>
+<button aria-label="Next Slide" class="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 items-center justify-center w-14 h-14 rounded-full bg-white/80 border border-gray-200 text-sigma-orange backdrop-blur-sm transition-all duration-300 hover:bg-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sigma-orange/50 active:scale-95" onclick="document.querySelector('.carousel-container').scrollBy({left: window.innerWidth, behavior: 'smooth'})">
+<span class="material-symbols-outlined text-2xl pl-1">arrow_forward_ios</span>
+</button>
+<div class="carousel-container flex w-full">
+<div class="carousel-slide w-full min-w-full py-24 border-t border-gray-100">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sigma-orange/10 text-xs font-bold text-sigma-orange uppercase mb-6 tracking-wide">PDV &amp; Varejo</div>
+<h2 class="text-4xl font-bold tracking-tight text-sigma-dark mb-6">Automação Comercial</h2>
+<p class="text-xl text-gray-600 mb-10 leading-relaxed">Tecnologia de ponta para o seu PDV. Garanta a agilidade no checkout e a satisfação do cliente com equipamentos de alta performance.</p>
+<ul class="space-y-6 mb-10">
+<li class="flex items-center gap-4">
+<div class="flex-shrink-0 size-8 rounded-full bg-sigma-orange flex items-center justify-center shadow-lg shadow-sigma-orange/20"><span class="material-symbols-outlined text-white text-sm">check</span></div>
+<span class="text-lg text-sigma-dark font-medium">Equipamentos homologados</span>
+</li>
+<li class="flex items-center gap-4">
+<div class="flex-shrink-0 size-8 rounded-full bg-sigma-orange flex items-center justify-center shadow-lg shadow-sigma-orange/20"><span class="material-symbols-outlined text-white text-sm">check</span></div>
+<span class="text-lg text-sigma-dark font-medium">Robustez industrial</span>
+</li>
+<li class="flex items-center gap-4">
+<div class="flex-shrink-0 size-8 rounded-full bg-sigma-orange flex items-center justify-center shadow-lg shadow-sigma-orange/20"><span class="material-symbols-outlined text-white text-sm">check</span></div>
+<span class="text-lg text-sigma-dark font-medium">Integração total</span>
+</li>
+</ul>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<a class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg text-white bg-sigma-dark hover:bg-gray-800 transition-all shadow-xl shadow-gray-900/10 hover:-translate-y-1" href="#">Saber mais <span class="material-symbols-outlined ml-2">storefront</span></a>
+</div>
+</div>
+<div class="relative grid grid-cols-2 gap-6">
+<div class="space-y-6 mt-12">
+<div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+<div class="aspect-square bg-white rounded-xl mb-4 flex items-center justify-center overflow-hidden"><img alt="Impressora" class="object-contain w-[80%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtjbAq1xJ6xNW9bEa53-pxgx6OuXHes8FF3xZro-zehO5EC4vifcSay_P0tOwHY8kP02ZIQRxcE7IpRtuAkQ-VhnLSM4Vae5gZ0KDItaMCEUGhXJSG0ezG8wYQc2IaSWp6RsU2rp-fQPRqqAykAcM7TYcf2PHvIMtszaux6lIk-pPyRSKBGPaDJKhkceVH3lsqpQV8XQUP0Bt6vc0nyhrNI4xYMzNx1lbIA2NQ7QSETMOQ53AvuFQKlnGLrx_YE2dlVM5QqbSWQGg"/></div>
+<h4 class="font-bold text-sigma-dark text-lg">Impressora Não Fiscal</h4>
+</div>
+<div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+<div class="aspect-square bg-white rounded-xl mb-4 flex items-center justify-center overflow-hidden"><img alt="Leitor" class="object-contain w-[80%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBucbVIkUvMZnmFxFpCNuVfEmFY91TIcj-PvB6Xci3wkjf0bzQ7QKV3GpCrlB8dtQZS1LUmkM87vWIpEFZh4NSdeToJ9IK3ec0OosqPiw6bEasTH5rquDqTT-eTpN6oGtMLvB_XitmcCXYjs913h9fZo1q2OzO3lQXy7mZ-hU8Rp5k1_vk5U6Jsa7JICF2IxLMuY9ZyKNkTWiMx-FU4hKG8JzedVD44ZWgwkRUQ3RwhFW4tD0KjVuB9DPGhp5jEI11wYIGc81FgUcU"/></div>
+<h4 class="font-bold text-sigma-dark text-lg">Leitores</h4>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+<div class="aspect-square bg-white rounded-xl mb-4 flex items-center justify-center overflow-hidden"><img alt="Balança" class="object-contain w-[80%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTkiM9-6gh5MPlTbf-kiG4Sc6K4gxfFWvLRpcIKAjLFoc-neOTTs18jvixh6IseXzbc71qP-9ZPZPQq1Lt6GYsgMjyWw0YnxHRqWpbDZeZ4xF4N8KyVXh5OlCIOfQX-Std5ARDBwSOLBxrfThB8iYW_D---0fg0iZz982gLjxFrU67ATAGhF6-PTGxx224nUNN7elBrodGT0igX6JGTXEIM5nU8uSyV1R3W6OTe-e1t5EhGdiJL0fLjylrU-cl3HbLC_sMPjxXf0Y"/></div>
+<h4 class="font-bold text-sigma-dark text-lg">Balanças</h4>
+</div>
+<div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+<div class="aspect-square bg-white rounded-xl mb-4 flex items-center justify-center overflow-hidden"><img alt="Pinpad" class="object-contain w-[80%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-DXItxYXtVH-gZ1kQwJ8T31bwRyEygmmuckVuu__idnDl9FmbVS6n57gpsU-uAZnTzg1GWyrvP_dzf4dSQEAk7dMyY3KHCtSgOhiuHqjFqXoWBRQEajmeOO7tOFJEXoGD3YL4jJBI5xMhye235n5ZNrWVXxoeOmyLWCfOvlmcDCKpKIvTNZ_i-wjn4UmUwx5OH4tYY9rsUPh83oGcXdbYfuoV2vl4tzupOZ5Xyk5VlHLoTO7enI3aFIJVqGiWfRUTEz6z-mQaIKk"/></div>
+<h4 class="font-bold text-sigma-dark text-lg">Pinpads</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-sigma-dark py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(255,102,0,0.05),transparent_40%)]"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+<div>
+<h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-white mb-8">Gestão Inteligente e <br/>Segurança Jurídica para o <span class="text-sigma-orange">seu Negócio</span></h2>
+<p class="text-lg text-gray-300 mb-12 leading-relaxed">Softwares robustos que centralizam suas operações. Da gestão fiscal ao controle de ponto, tenha todos os dados na palma da sua mão com integração completa.</p>
+<div class="space-y-8 mb-12">
+<div class="flex gap-4">
+<div class="flex-shrink-0 size-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-sigma-orange"><span class="material-symbols-outlined text-2xl">point_of_sale</span></div>
+<div><h4 class="text-xl font-bold text-white mb-2">Uniplus (Gestão &amp; Fiscal)</h4><p class="text-gray-400">ERP modular para varejo com controle total de estoque e financeiro.</p></div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 size-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-sigma-orange"><span class="material-symbols-outlined text-2xl">badge</span></div>
+<div><h4 class="text-xl font-bold text-white mb-2">Secullum (Ponto &amp; Acesso)</h4><p class="text-gray-400">Gestão de jornada em conformidade com a Portaria 671/MTP.</p></div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg text-white bg-sigma-orange hover:bg-sigma-orange-hover shadow-lg shadow-sigma-orange/20 transition-all hover:-translate-y-1" href="#">Solicitar Demonstração Uniplus/Secullum <span class="material-symbols-outlined ml-2">arrow_forward</span></a>
+</div>
+<div class="relative h-full min-h-[500px] flex items-center justify-center">
+<div class="relative w-full max-w-lg">
+<div class="bg-gray-800 rounded-xl p-2 shadow-2xl border border-gray-700">
+<div class="bg-gray-900 rounded-lg overflow-hidden aspect-video relative flex flex-col p-4">
+<div class="flex justify-between items-center mb-4 border-b border-gray-700 pb-2"><div class="w-20 h-4 bg-gray-700 rounded"></div><div class="flex gap-2"><div class="size-3 rounded-full bg-red-500"></div><div class="size-3 rounded-full bg-yellow-500"></div><div class="size-3 rounded-full bg-green-500"></div></div></div>
+<div class="grid grid-cols-4 gap-4 h-full"><div class="col-span-1 bg-gray-800 rounded"></div><div class="col-span-3 bg-gray-800 rounded border border-sigma-cyan/30 flex items-center justify-center"><span class="material-symbols-outlined text-4xl text-sigma-cyan/50">monitoring</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-sigma-dark py-16 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center group"><h3 class="text-5xl font-bold text-sigma-cyan mb-2">+15</h3><p class="text-white">Anos de experiência</p></div>
+<div class="text-center group"><h3 class="text-5xl font-bold text-sigma-cyan mb-2">500</h3><p class="text-white">Empresas atendidas</p></div>
+<div class="text-center group"><h3 class="text-5xl font-bold text-sigma-cyan mb-2">73</h3><p class="text-white">Municípios atendidos</p></div>
+<div class="text-center group"><h3 class="text-5xl font-bold text-sigma-cyan mb-2">+370</h3><p class="text-white">Automações instaladas</p></div>
+</div>
+</div>
+</section>
+<!-- O Hub em Ação: Histórias de Sucesso (Nova Seção) -->
+<section class="py-32 bg-sds-gray overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-sigma-dark font-sans">Quem evolui com o nosso Hub</h2>
+<p class="text-lg text-gray-500 mt-4 max-w-3xl mx-auto">Veja como a tecnologia SigmaPDV transforma a operação diária de nossos parceiros em Chapecó e região.</p>
+<div class="mt-6 w-16 h-1 bg-sigma-orange mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Card 1: Grande (Vídeo Case) -->
+<div class="md:col-span-8 group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+<div class="relative aspect-video w-full">
+<img alt="Vídeo Case Supermercado" class="w-full h-full object-cover rounded-t-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoKMkV2wwSWrP8BQzsjtz2cB-yA8AcVbW__RXcKwHyTn4X8rQZLY4ZpgWsUNxEpx-hRuzhJh0N0ky-mOmyJvBTWLrokcEV70rhiIkCJoFTUFpjV6XgHNTYDHHrVu3yp1j1WVdDFfOPcEwSNvccvKxvLrKGrBYmA0Zdee0lFHXLCxWNCYdlhfpMBjt18TJi2m3IGhKM-9wzFC7Pat2zBiZE4IjlzfubIkf7KJ-RAH90VQQuN6Jk1q8qN68yZdLRF-e53WLW5Q3Odg"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+<button class="size-20 bg-sigma-orange/90 hover:bg-sigma-orange text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-transform group-hover:scale-110 shadow-xl shadow-sigma-orange/30">
+<span class="material-symbols-outlined text-4xl fill-1 ml-1">play_arrow</span>
+</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-sigma-dark shadow-sm">
+                            📍 Chapecó - SC
+                        </div>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold text-sigma-dark">Supermercado Aurora</h4>
+<div class="flex flex-wrap gap-x-4 gap-y-2 mt-2 text-sm text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">shopping_basket</span> Varejo Alimentar</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">devices</span> Monitor Touch + Uniplus ERP</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Lateral Superior -->
+<div class="md:col-span-4 group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+<div class="relative aspect-square w-full overflow-hidden">
+<img alt="Case Restaurante" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC40rmtZNbi9Q06gDzzcnR0F0EjL6KdvFCCX0EVelej90YzbQ86FS_Rh8FSS1Oy6voyqXIlcXUQAsHUKnDGgXq8Fbu6nQdODk0-MSR3BhsoeY1mfa_kpfYSCkCUN4JCR8nqGgPb7Hbmvku5plGhc2zoudzVDweHyG7gCkWl66dDx-l1Ho9kf63ro5MNVfFkn9EOC8v4dLuuGhHVvandvqtO3HMPN-ktyUZGyAbX5oSpkpUqVMY8MuDPuvDQiOMk2cJIX2B9URpfOqU"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-sigma-dark shadow-sm">
+                            📍 Concórdia - SC
+                        </div>
+</div>
+<div class="p-6 flex-grow">
+<h4 class="text-lg font-bold text-sigma-dark">Bistrô Garden</h4>
+<div class="mt-2 space-y-1">
+<p class="text-sm text-gray-500 font-medium">Segmento: Gastronomia</p>
+<p class="text-sm text-gray-500">Equipamento: Comanda Mobile</p>
+</div>
+</div>
+</div>
+<!-- Card 3: Lateral Inferior -->
+<div class="md:col-span-4 group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+<div class="relative aspect-square w-full overflow-hidden">
+<img alt="Case Farmácia" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXibWBMPtzdOnAabFA0oNoxDTTSD3lIRunfCbFHmFRqc08k0dAZtorRqa8et8tuRXUpUJmKM4XqhdiHqQv4zNsMBeGFikSiMrRBJ0WCoP7JSseKXnHvt3xLm6hUqhrpGFB0THJ-TolmF1fnaF4fz9wMDRI69YTcXbpQwZzhOr5XpTXLr9ucyxTxqxceHvd0QSBPBrbW8Ca0g5fMnI2Julmdnm2qzBIhszqdQ7DP9ohAqAdr_Tljx-opsFjbf_wGEdMifF0sXDsN5k"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-sigma-dark shadow-sm">
+                            📍 Xanxerê - SC
+                        </div>
+</div>
+<div class="p-6 flex-grow">
+<h4 class="text-lg font-bold text-sigma-dark">Farmácia Viva</h4>
+<div class="mt-2 space-y-1">
+<p class="text-sm text-gray-500 font-medium">Segmento: Saúde &amp; Bem-estar</p>
+<p class="text-sm text-gray-500">Equipamento: Totem de Autoatendimento</p>
+</div>
+</div>
+</div>
+<!-- Card 4: Grande Inferior (Foto Case) -->
+<div class="md:col-span-8 group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+<div class="relative h-full min-h-[300px] md:min-h-0 flex flex-col md:flex-row">
+<div class="md:w-1/2 relative overflow-hidden">
+<img alt="Case Loja de Moda" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTUixMz025jMk0Iy51XCv4WmQGuKyDkyk0D3VF8QMq1lDWDKSde6tmxhMOIU2pMuHVQiFaZmguEuBnDGa0TGOY3_pgMZ7ri1cEidOlcZzsQe25tAxJ3nCnu1r4rVw1eMouJprXpR3Xz3wsK7N-nLWzuN6PMWDTcqQ_cQHqPpF_wtuP0agq2Og8jWcnMgpaeiSLcQvnGnEkASDjJX5PsN2UFz52o8kl4tr117yDzZHQ7v5UU-p01uLIypokMzrx-uRiHcfX_VoQ4vs"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center bg-white">
+<div class="mb-4 inline-block bg-sigma-orange/10 text-sigma-orange px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">Case de Sucesso</div>
+<h4 class="text-2xl font-bold text-sigma-dark mb-4">Loja Exclusiva Modas</h4>
+<p class="text-gray-500 text-sm leading-relaxed mb-6">Implantação completa de inventário em tempo real e integração com e-commerce, reduzindo perdas em 30% no primeiro trimestre.</p>
+<div class="flex flex-col gap-2 border-t border-gray-100 pt-6">
+<span class="text-sm text-gray-500">📍 Chapecó - SC</span>
+<span class="text-sm font-bold text-sigma-dark">Equipamentos: Coletores de Dados Zebra</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-sigma-light py-24">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl lg:text-4xl font-bold text-sigma-dark mb-4">Suporte Técnico e Atendimento</h2>
+<p class="text-gray-500 max-w-2xl mx-auto">Canais exclusivos para garantir que seu negócio nunca pare.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col h-full group">
+<div class="aspect-[4/3] bg-gray-50 rounded-lg mb-6 overflow-hidden"><img alt="Suporte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjl6ocKDhD7Nzjr0gorI4Z6gTUarS8IzXB-wE5wtPI6KNrvU3HYYjMwYwdQ7Cve6mqBNJYIkBDL5Z-1RZ1mwkIWO-C9mzmNPIF66lgidsX3Dvmzm-9Njx8Suh_35q5NtbeA_Ahx9IV1Pfstz3jPEcFQGOFtmi9RXBZuvcjXT1InKYuwsuXWJwLrkoad7xNao-t8n2k90LuEmz87YPY6E3LtvDT1YMm1F-VexuisdrTzReb8M8i6H--3cJ8yu-dhahkiofoWIBRnMM"/></div>
+<h3 class="text-xl font-bold mb-2">Acesso Remoto</h3>
+<button class="mt-auto w-full py-3 px-4 rounded-lg border border-gray-200 font-semibold hover:border-sigma-orange text-sigma-dark hover:text-sigma-orange transition-all flex items-center justify-center gap-2">Baixar Acesso <span class="material-symbols-outlined text-lg">download</span></button>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col h-full group">
+<div class="aspect-[4/3] bg-gray-50 rounded-lg mb-6 overflow-hidden"><img alt="Whats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9wf287hEh8MfldxfLsZPGPmgd9o3KIK9hx8vYkW4ztDs6XJyF0SeNti3z8GdfPFoPFyHWjy8DT9hfze1G2b7HQfwkSxYt_MvLzhnqYxAkfJzuKUCb-cGBFWsAZMGWolcGa36RPFvOYau1u8V9WNu3kXXWr9_7covZq7lnMpfCX6yAxt0LG4aFvLcHH3lEdRC1LvGUGnyA6qrNaZwQiWcUG31fSjnag6KttRROi2OqAehEwBG7xJYvSIVt3NA6bXAv832SQSI88XQ"/></div>
+<h3 class="text-xl font-bold mb-2">WhatsApp Direto</h3>
+<button class="mt-auto w-full py-3 px-4 rounded-lg border border-gray-200 font-semibold hover:border-sigma-orange text-sigma-dark hover:text-sigma-orange transition-all flex items-center justify-center gap-2">Falar Agora <span class="material-symbols-outlined text-lg">send</span></button>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col h-full group">
+<div class="aspect-[4/3] bg-gray-50 rounded-lg mb-6 overflow-hidden"><img alt="Manual" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4DZnmAD_iZykHh2mKh0YINga98VHAUQQE3bFD18aPyzq8nQ9gV0bBSdVZ8QYP_BZCX5v57tkkzJvOLL__HEeQL4FMCZkpPfNtsxdh38ZTmrB9fKs45I3YXfpQADObR-8Ett5TEi9nEdIC0m6AJy3KeY_K7Syxuqdb-tRlQ9GMHeTXrRe45BHdgCGCKpe0GmHHLx0DKx-C034aldB5XVSVYPGB_KZuOeGsNdeRSCbLXgeocnPP-AkPdGLUpB8i07GLgegQyIB3jXk"/></div>
+<h3 class="text-xl font-bold mb-2">Drivers e Manuais</h3>
+<button class="mt-auto w-full py-3 px-4 rounded-lg border border-gray-200 font-semibold hover:border-sigma-orange text-sigma-dark hover:text-sigma-orange transition-all flex items-center justify-center gap-2">Acessar Base <span class="material-symbols-outlined text-lg">folder_open</span></button>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex flex-col h-full group">
+<div class="aspect-[4/3] bg-gray-50 rounded-lg mb-6 flex items-center justify-center"><span class="material-symbols-outlined text-6xl text-sigma-orange">confirmation_number</span></div>
+<h3 class="text-xl font-bold mb-2">Ticket de Suporte</h3>
+<button class="mt-auto w-full py-3 px-4 rounded-lg border border-gray-200 font-semibold hover:border-sigma-orange text-sigma-dark hover:text-sigma-orange transition-all flex items-center justify-center gap-2">Abrir Chamado <span class="material-symbols-outlined text-lg">open_in_new</span></button>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-sigma-dark py-24">
+<div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold text-white sm:text-4xl mb-6">Pronto para modernizar seu negócio?</h2>
+<p class="mx-auto max-w-2xl text-gray-400 mb-10">Junte-se a mais de 5.000 varejistas que confiam na SigmaPDV.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="px-8 py-4 rounded-lg text-white bg-sigma-orange hover:bg-sigma-orange-hover font-bold" href="#">Agendar Demo</a>
+<a class="px-8 py-4 rounded-lg text-white border border-gray-600 hover:bg-white/5 font-bold" href="#">Falar com Vendas</a>
+</div>
+</div>
+</section>
+<section class="bg-sigma-light py-24 border-t border-gray-200/50">
+<div class="max-w-4xl mx-auto px-6 lg:px-8">
+<div class="text-center mb-16"><h2 class="text-3xl font-bold text-sigma-dark">Dúvidas Frequentes</h2><div class="mt-4 w-12 h-1 bg-sigma-orange mx-auto rounded-full"></div></div>
+<div class="space-y-4">
+<details class="group bg-white rounded-xl border border-gray-100 shadow-sm open:shadow-md transition-all"><summary class="flex items-center justify-between p-6 cursor-pointer list-none"><h3 class="font-bold text-sigma-dark">Qual a área de atendimento da SigmaPDV?</h3><span class="material-symbols-outlined text-sigma-orange group-open:rotate-45">add</span></summary><div class="px-6 pb-6 text-gray-600">Atendemos mais de 73 municípios com suporte técnico especializado.</div></details>
+<details class="group bg-white rounded-xl border border-gray-100 shadow-sm open:shadow-md transition-all"><summary class="flex items-center justify-between p-6 cursor-pointer list-none"><h3 class="font-bold text-sigma-dark">A empresa realiza intervenção técnica em impressoras fiscais?</h3><span class="material-symbols-outlined text-sigma-orange group-open:rotate-45">add</span></summary><div class="px-6 pb-6 text-gray-600">Sim, somos autorizados pela SEFAZ para intervenções fiscais e lacração de equipamentos.</div></details>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+<div class="col-span-2"><div class="flex items-center gap-2 mb-6"><div class="size-8 bg-sigma-dark rounded-md flex items-center justify-center text-white"><span class="material-symbols-outlined text-xl">grid_view</span></div><span class="text-xl font-bold text-sigma-dark">Sigma<span class="text-sigma-orange">PDV</span></span></div><p class="text-sm text-gray-500 max-w-sm">Tecnologia para automação comercial com eficiência e confiabilidade.</p></div>
+<div><h3 class="text-sm font-bold uppercase mb-4">Produtos</h3><ul class="space-y-3"><li><a class="text-sm text-gray-500 hover:text-sigma-orange" href="#">PDV Varejo</a></li><li><a class="text-sm text-gray-500 hover:text-sigma-orange" href="#">Hardware</a></li></ul></div>
+<div><h3 class="text-sm font-bold uppercase mb-4">Empresa</h3><ul class="space-y-3"><li><a class="text-sm text-gray-500 hover:text-sigma-orange" href="#">Sobre Nós</a></li><li><a class="text-sm text-gray-500 hover:text-sigma-orange" href="#">Contato</a></li></ul></div>
+<div><h3 class="text-sm font-bold uppercase mb-4">Suporte</h3><ul class="space-y-3"><li><a class="text-sm text-gray-500 hover:text-sigma-orange" href="#">Central de Ajuda</a></li><li><a class="text-sm text-gray-500 hover:text-sigma-orange" href="#">Downloads</a></li></ul></div>
+</div>
+<div class="border-t border-gray-100 pt-8 flex justify-between items-center"><p class="text-sm text-gray-400">© 2023 SigmaPDV Tecnologia e Automação.</p><div class="flex space-x-6"><a class="text-sm text-gray-400 hover:text-sigma-orange" href="#">Privacidade</a><a class="text-sm text-gray-400 hover:text-sigma-orange" href="#">Termos</a></div></div>
+</div>
+</footer>
+</body></html>

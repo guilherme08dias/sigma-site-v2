@@ -1,0 +1,114 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/Button";
+import Logo from "@/components/Logo";
+
+const NAV_LINKS = [
+    { name: "Início", href: "/" },
+    { name: "Automação Comercial", href: "/automacao-comercial" },
+    { name: "Sistemas", href: "/sistemas" },
+    { name: "Suporte", href: "/suporte" },
+    { name: "Sobre Nós", href: "/sobre-nos" },
+];
+
+export function Header() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    return (
+        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-sigma-silver/30 shadow-[0_4px_30px_rgba(0,0,0,0.04)]">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="flex items-center justify-between h-20">
+
+                    {/* Logo */}
+                    <Link href="/" className="flex-shrink-0 group">
+                        <Logo heightClass="h-10 md:h-14" className="group-hover:scale-[1.02] transition-transform duration-300" />
+                    </Link>
+
+                    {/* Desktop Navigation */}
+                    <nav className="hidden lg:flex items-center gap-8">
+                        {NAV_LINKS.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className="text-sm font-semibold text-sigma-dark hover:text-sigma-orange transition-colors"
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </nav>
+
+                    {/* Action CTAs */}
+                    <div className="flex items-center gap-4">
+                        <Button 
+                            asChild 
+                            variant="primary" 
+                            size="sm" 
+                            className="hidden md:inline-flex"
+                        >
+                            <a
+                                href="https://wa.me/5511999999999?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Fale Conosco
+                            </a>
+                        </Button>
+
+                        <button
+                            className="lg:hidden p-2 text-sigma-dark hover:text-sigma-orange"
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label="Toggle Menu"
+                        >
+                            {isMobileMenuOpen
+                                ? <X className="w-6 h-6" />
+                                : <Menu className="w-6 h-6" />
+                            }
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="lg:hidden bg-white border-t border-sigma-silver/30 overflow-hidden"
+                    >
+                        <div className="px-6 py-6 space-y-4">
+                            {NAV_LINKS.map((link) => (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className="block text-lg font-semibold text-sigma-dark hover:text-sigma-orange transition-colors"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                            <Button 
+                                asChild 
+                                variant="primary"
+                                className="w-full mt-2"
+                            >
+                                <a
+                                    href="https://wa.me/5511999999999?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Fale Conosco pelo WhatsApp
+                                </a>
+                            </Button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </header>
+    );
+}
