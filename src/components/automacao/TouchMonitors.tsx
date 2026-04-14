@@ -8,7 +8,7 @@ export default function TouchMonitors() {
     { 
       src: "/pdv-completo.png", 
       alt: "PDV Montado Sigma",
-      description: "Solução Completa: PDV integrado com monitor touch, monitor cliente e impressoras."
+      description: "Configuração Dual-Monitor: PDV integrado com monitores profissionais para o operador e para o cliente."
     },
     { 
       src: "/ctm1560of.jpg", 
@@ -138,7 +138,7 @@ export default function TouchMonitors() {
               
               <div className="flex flex-col sm:flex-row gap-4 pt-10">
                 <a
-                  href="https://wa.me/555186302711?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+o+conjunto+de+monitores+touch+e+cliente+Custom."
+                  href="https://wa.me/554989022868?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+o+conjunto+de+monitores+touch+e+cliente+Custom."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full px-12 h-16 bg-sigma-orange text-white font-bold text-lg flex items-center justify-center shadow-xl shadow-sigma-orange/20 hover:bg-sigma-orange/90 transition-all hover:scale-105 active:scale-95 w-full lg:w-auto"

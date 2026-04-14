@@ -138,10 +138,10 @@ export default function AppleStyleHome() {
             <div className="animate-marquee-loop flex gap-24 w-max">
               {[
                 /* Ordem: intercala marcas de hardware, software e parceiros */
-                "UNIPLUS", "INTELBRAS", "AMD", "SECULLUM", "GIGABYTE", "FOURTECH",
+                "UNIPLUS", "HENRY", "INTELBRAS", "AMD", "SECULLUM", "GIGABYTE", "FOURTECH",
                 "CONDFY", "ADATA", "ELGIN", "intel", "ASUS", "CUSTOM",
                 /* clone exato para loop contínuo */
-                "UNIPLUS", "INTELBRAS", "AMD", "SECULLUM", "GIGABYTE", "FOURTECH",
+                "UNIPLUS", "HENRY", "INTELBRAS", "AMD", "SECULLUM", "GIGABYTE", "FOURTECH",
                 "CONDFY", "ADATA", "ELGIN", "intel", "ASUS", "CUSTOM",
               ].map((name, i) => (
                 <img
@@ -166,7 +166,7 @@ export default function AppleStyleHome() {
               { icon: "router", title: "Equipamentos e Infraestrutura", desc: "Fornecimento e instalação de equipamentos para automação comercial, garantindo integração total com os sistemas." },
               { icon: "support_agent", title: "Suporte Técnico Especializado", desc: "Atendimento próximo e contínuo, com equipe técnica preparada para suporte, manutenção e atualizações." },
               { icon: "fingerprint", title: "Controle de Ponto e Gestão de Acessos", desc: "Soluções para controle de jornada, acessos e gestão de colaboradores." },
-              { icon: "help_outline", title: "Ficou em dúvida?", desc: "Converse com nossa equipe especializada e descubra qual combinação de sistemas, equipamentos e serviços faz mais sentido para o seu negócio.", linkText: "Falar com um especialista", href: "https://wa.me/555186302711?text=Ol%C3%A1%21+Gostaria+de+uma+consultoria+para+o+meu+neg%C3%B3cio." }
+              { icon: "help_outline", title: "Ficou em dúvida?", desc: "Converse com nossa equipe especializada e descubra qual combinação de sistemas, equipamentos e serviços faz mais sentido para o seu negócio.", linkText: "Falar com um especialista", href: "https://wa.me/554989022868?text=Ol%C3%A1%21+Gostaria+de+uma+consultoria+para+o+meu+neg%C3%B3cio." }
             ].map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -369,7 +369,7 @@ export default function AppleStyleHome() {
                 />
               </div>
               <Button asChild variant="primary" className="rounded-full w-full shadow-sm">
-                <a href="https://wa.me/555186302711?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+equipamentos+de+infraestrutura+de+TI.">Solicitar Orçamento</a>
+                <a href="https://wa.me/554989022868?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+equipamentos+de+infraestrutura+de+TI.">Solicitar Orçamento</a>
               </Button>
             </motion.div>
 
@@ -424,36 +424,40 @@ export default function AppleStyleHome() {
             >
               <div>
                 <span className="inline-flex items-center px-3 py-1 mb-6 rounded-full bg-sigma-orange/10 text-xs font-bold text-sigma-orange uppercase tracking-wider">
-                  Consumíveis e Acessórios
+                  Suprimentos e Consumíveis
                 </span>
                 <h3 className="text-2xl font-bold text-sigma-dark font-display mb-4">Suprimentos para automação</h3>
                 <p className="text-sigma-dark/70 leading-relaxed font-body mb-4">
-                  Bobinas térmicas e acessórios de qualidade para que sua operação nunca sofra interrupções.
+                  As melhores soluções em bobinas e etiquetas para sua operação nunca parar.
                 </p>
-                <ProductList
-                  primaryProducts={[
-                    "Bobinas e ribbons",
-                    "Etiquetas para códigos de barras",
-                    "Suprimentos para impressoras térmicas",
-                    "Toners e cartuchos"
-                  ]}
-                  moreProducts={[
-                    "Mídias para backup (HD externo, pendrive)",
-                    "Suprimentos para impressoras de etiquetas",
-                    "Kits de limpeza para equipamentos",
-                    "Organização e acondicionamento de suprimentos"
-                  ]}
-                />
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center gap-3 text-sigma-dark/80">
+                    <div className="w-2 h-2 rounded-full bg-sigma-orange" />
+                    <span className="text-sm font-medium">Etiquetas 80x40mm (Pronta Entrega)</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sigma-dark/80">
+                    <div className="w-2 h-2 rounded-full bg-sigma-orange" />
+                    <span className="text-sm font-medium">Bobinas Térmicas (Diversos tamanhos)</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sigma-dark/80">
+                    <div className="w-2 h-2 rounded-full bg-sigma-orange" />
+                    <span className="text-sm font-medium">Ribbons Cera, Resina e Misto</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sigma-dark/80">
+                    <div className="w-2 h-2 rounded-full bg-sigma-orange" />
+                    <span className="text-sm font-medium">Etiquetas de Gôndola e Balança</span>
+                  </div>
+                </div>
               </div>
               <div className="w-full h-[280px] bg-white rounded-3xl mb-8 flex items-center justify-center border border-sigma-dark/5 overflow-hidden">
                 <img
-                  src="/suprimentos_hero.jpg"
-                  alt="Suprimentos para automação"
-                  className="object-cover w-full h-full transition-transform duration-500"
+                  src="/80x40-pronta.png"
+                  alt="Suprimentos 80x40"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <Button asChild variant="primary" className="rounded-full w-full shadow-sm bg-sigma-orange hover:bg-sigma-orange/90 border-0">
-                <a href="https://wa.me/555186302711?text=Ol%C3%A1%21+Preciso+de+um+or%C3%A7amento+para+suprimentos+de+automa%C3%A7%C3%A3o.">Solicitar Orçamento</a>
+                <a href="https://wa.me/554989022868?text=Ol%C3%A1%21+Preciso+de+um+or%C3%A7amento+para+suprimentos+de+automa%C3%A7%C3%A3o.">Solicitar Orçamento</a>
               </Button>
             </motion.div>
 
@@ -495,7 +499,7 @@ export default function AppleStyleHome() {
                 />
               </div>
               <Button asChild variant="primary" size="lg" className="w-full bg-sigma-cyan text-sigma-dark hover:bg-sigma-cyan/90 shadow-sm border-0">
-                <a href="https://wa.me/555186302711?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+linha+Gamer+da+Sigma.">Explorar Gamer</a>
+                <a href="https://wa.me/554989022868?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+linha+Gamer+da+Sigma.">Explorar Gamer</a>
               </Button>
             </motion.div>
 
@@ -633,7 +637,7 @@ export default function AppleStyleHome() {
                     className="rounded-full px-6 font-bold w-full h-14 border-2 border-sigma-orange bg-transparent text-sigma-orange hover:bg-sigma-orange hover:text-white transition-all duration-300 shadow-none hover:shadow-lg hover:shadow-sigma-orange/30 group/btn"
                   >
                     <Link href={card.href} className="flex items-center justify-center">
-                      {card.linkText}
+                      {card.linkText} <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
                 </motion.div>
@@ -642,54 +646,53 @@ export default function AppleStyleHome() {
           </div>
         </div>
       </motion.section>
+
       <motion.section
+        id="cases"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="py-32 bg-white"
+        className="py-32 bg-black overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
             <div className="lg:w-1/2 text-left">
-              <h2 className="text-4xl md:text-5xl font-bold text-sigma-dark font-display tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-white font-display tracking-tight">
                 Cases de sucesso que impulsionam resultados
               </h2>
             </div>
 
-            {/* Divisória Vertical Laranja (Apenas Desktop) */}
+            {/* Divisória Vertical Laranja */}
             <div className="hidden lg:block w-px h-28 bg-sigma-orange/40 self-center"></div>
 
             <div className="lg:w-1/2 text-left">
-              <p className="text-lg text-sigma-dark/60 font-body max-w-lg">
-                Grandes empresas da região confiam na SigmaPDV para integrar sistemas, equipamentos e suporte técnico em uma operação única e eficiente.
+              <p className="text-lg text-white/60 leading-relaxed font-body">
+                Conheça alguns dos negócios que confiam no nosso Hub de Tecnologia para evoluir suas operações diariamente em todo o sul do Brasil.
               </p>
             </div>
           </div>
 
-          {/* Logos Marquee Loop - Sincronizado com Pilar Hub (Sem Título) */}
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-24 mt-0">
-            <div className="relative overflow-hidden">
-              {/* Gradientes Laterais para Suavizar o Corte (Igual ao Pilar) */}
-              <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-              <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          {/* Logos Marquee Loop - Modo Dark com 10 logos atualizadas */}
+          <div className="relative overflow-hidden py-8 mb-20">
+            <div className="absolute left-0 top-0 bottom-0 w-24 md:w-60 bg-gradient-to-r from-black via-black/80 to-transparent z-20 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 md:w-60 bg-gradient-to-l from-black via-black/80 to-transparent z-20 pointer-events-none" />
 
-              <div className="animate-marquee-loop flex gap-24 w-max">
-                {[
-                  "UNIPLUS", "INTELBRAS", "AMD", "SECULLUM", "GIGABYTE", "FOURTECH",
-                  "CONDFY", "ADATA", "ELGIN", "intel", "ASUS", "CUSTOM",
-                  "UNIPLUS", "INTELBRAS", "AMD", "SECULLUM", "GIGABYTE", "FOURTECH",
-                  "CONDFY", "ADATA", "ELGIN", "intel", "ASUS", "CUSTOM"
-                ].map((name, i) => (
-                  <img
-                    key={`case-logo-${i}`}
-                    src={`/logos-loop/${name}.png`}
-                    alt={name}
-                    className="h-14 md:h-20 w-auto object-contain opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500 cursor-pointer shrink-0"
-                    aria-hidden={i >= 12 ? true : undefined}
-                  />
-                ))}
-              </div>
+            <div className="animate-marquee-loop flex gap-24 w-max h-40 items-center">
+              {[
+                "SuperCenter", "proner", "moura", "brasao", "mepar", "Alberti",
+                "bertuol", "compretudo", "cristorei", "saborecia", "uruguai",
+                "SuperCenter", "proner", "moura", "brasao", "mepar", "Alberti",
+                "bertuol", "compretudo", "cristorei", "saborecia", "uruguai"
+              ].map((name, i) => (
+                <img
+                  key={`client-logo-${i}`}
+                  src={`/clientes/${name}.png`}
+                  alt={name}
+                  className="h-20 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-110 cursor-pointer shrink-0"
+                  aria-hidden={i >= 11 ? true : undefined}
+                />
+              ))}
             </div>
           </div>
 
@@ -701,18 +704,11 @@ export default function AppleStyleHome() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               onClick={() => setSelectedImage("/cases/case-brasao.jpeg")}
-              className="md:col-span-2 md:row-span-2 rounded-[2.5rem] overflow-hidden group relative shadow-lg cursor-pointer hover:shadow-2xl transition-all"
+              className="md:col-span-2 md:row-span-2 rounded-[2.5rem] overflow-hidden group relative shadow-2xl cursor-pointer hover:ring-2 hover:ring-sigma-orange transition-all"
             >
               <img src="/cases/case-brasao.jpeg" alt="Brasão" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-x-0 bottom-0 p-8 pt-20 bg-gradient-to-t from-sigma-dark/90 via-sigma-dark/40 to-transparent flex flex-col justify-end">
-                <h3 className="text-2xl font-black font-display text-white mb-1">Rede Brasão</h3>
-                <p className="text-white/70 font-body text-sm flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sigma-orange"></span>
-                  Chapecó e Xaxim, SC
-                </p>
-              </div>
-              <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300 flex items-center justify-center">
-                <Maximize2 className="text-white/80 opacity-0 group-hover:opacity-100 transition-all w-12 h-12" />
+              <div className="absolute inset-0 bg-sigma-dark/20 group-hover:bg-sigma-dark/0 transition-colors duration-300 flex items-center justify-center">
+                <Maximize2 className="text-white opacity-0 group-hover:opacity-100 transition-all w-12 h-12" />
               </div>
             </motion.div>
 
@@ -723,18 +719,11 @@ export default function AppleStyleHome() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               onClick={() => setSelectedImage("/cases/case-alberti.jpeg")}
-              className="md:col-span-2 md:row-span-1 rounded-[2.5rem] overflow-hidden group relative shadow-md cursor-pointer hover:shadow-xl transition-all"
+              className="md:col-span-2 md:row-span-1 rounded-[2.5rem] overflow-hidden group relative shadow-lg cursor-pointer hover:ring-2 hover:ring-sigma-orange transition-all"
             >
               <img src="/cases/case-alberti.jpeg" alt="Alberti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-x-0 bottom-0 p-6 pt-16 bg-gradient-to-t from-sigma-dark/90 via-sigma-dark/40 to-transparent flex flex-col justify-end">
-                <h3 className="text-xl font-bold font-display text-white">Supermercado Alberti</h3>
-                <p className="text-white/70 font-body text-xs flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-sigma-orange"></span>
-                  Guatambu, SC
-                </p>
-              </div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <Maximize2 className="text-white/80 opacity-0 group-hover:opacity-100 transition-all w-8 h-8" />
+                <Maximize2 className="text-white opacity-0 group-hover:opacity-100 transition-all w-8 h-8" />
               </div>
             </motion.div>
 
@@ -745,13 +734,9 @@ export default function AppleStyleHome() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               onClick={() => setSelectedImage("/cases/case-cristorei.jpg")}
-              className="md:col-span-1 md:row-span-1 rounded-[2.5rem] overflow-hidden group relative shadow-md cursor-pointer hover:shadow-xl transition-all"
+              className="md:col-span-1 md:row-span-1 rounded-[2.5rem] overflow-hidden group relative shadow-lg cursor-pointer hover:ring-2 hover:ring-sigma-orange transition-all"
             >
               <img src="/cases/case-cristorei.jpg" alt="Cristo Rei" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-x-0 bottom-0 p-5 pt-12 bg-gradient-to-t from-sigma-dark/80 to-transparent">
-                <h3 className="text-base font-bold font-display text-white">Cristo Rei</h3>
-                <p className="text-white/60 font-body text-[10px]">Chapecó, SC</p>
-              </div>
             </motion.div>
 
             {/* Case: CompreTudo */}
@@ -761,57 +746,71 @@ export default function AppleStyleHome() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
               onClick={() => setSelectedImage("/cases/case-compretudo.jpg")}
-              className="md:col-span-1 md:row-span-1 rounded-[2.5rem] overflow-hidden group relative shadow-md cursor-pointer hover:shadow-xl transition-all"
+              className="md:col-span-1 md:row-span-1 rounded-[2.5rem] overflow-hidden group relative shadow-lg cursor-pointer hover:ring-2 hover:ring-sigma-orange transition-all"
             >
               <img src="/cases/case-compretudo.jpg" alt="CompreTudo" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-x-0 bottom-0 p-5 pt-12 bg-gradient-to-t from-sigma-dark/80 to-transparent">
-                <h3 className="text-base font-bold font-display text-white">CompreTudo</h3>
-                <p className="text-white/60 font-body text-[10px]">Serra Alta, SC</p>
-              </div>
             </motion.div>
 
-            {/* Galeria Técnica 1 */}
+            {/* Case Adicional: Agora em 2x2 para máximo detalhe */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              onClick={() => setSelectedImage("/suporte_hero.jpg")}
-              className="md:col-span-1 md:row-span-1 rounded-[2.5rem] overflow-hidden group relative shadow-md cursor-pointer hover:shadow-xl transition-all"
+              onClick={() => setSelectedImage("/cases/case.jpeg")}
+              className="md:col-span-2 md:row-span-2 rounded-[2.5rem] overflow-hidden group relative shadow-2xl cursor-pointer hover:ring-2 hover:ring-sigma-orange transition-all"
             >
-              <img src="/suporte_hero.jpg" alt="Equipe Técnica" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-sigma-dark/70 to-transparent">
-                <p className="text-white/80 text-[10px] font-bold uppercase tracking-wider">Suporte Especializado</p>
+              <img src="/cases/case.jpeg" alt="Sigma Case" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300 flex items-center justify-center">
+                <Maximize2 className="text-white opacity-0 group-hover:opacity-100 transition-all w-12 h-12" />
               </div>
             </motion.div>
 
-            {/* Galeria Técnica 2 */}
+            {/* Case Mepar: Agora em 2x2 para destacar o equipamento centralizado */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              onClick={() => setSelectedImage("/sistemas_hero.jpg")}
-              className="md:col-span-1 md:row-span-1 rounded-[2.5rem] overflow-hidden group relative shadow-md cursor-pointer hover:shadow-xl transition-all"
+              onClick={() => setSelectedImage("/cases/mepar.jpeg")}
+              className="md:col-span-2 md:row-span-2 rounded-[2.5rem] overflow-hidden group relative shadow-2xl cursor-pointer hover:ring-2 hover:ring-sigma-orange transition-all"
             >
-              <img src="/sistemas_hero.jpg" alt="Tecnologia Sigma" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-sigma-dark/70 to-transparent">
-                <p className="text-white/80 text-[10px] font-bold uppercase tracking-wider">Gestão e PDV</p>
+              <img src="/cases/mepar.jpeg" alt="Mepar Case" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300 flex items-center justify-center">
+                <Maximize2 className="text-white opacity-0 group-hover:opacity-100 transition-all w-12 h-12" />
               </div>
             </motion.div>
-
-            {/* CTA Bento */}
+            {/* CTA Final: Integrado na seção de cases com o design preferido */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="md:col-span-2 md:row-span-1 bg-sigma-cyan rounded-[2.5rem] p-10 flex flex-col justify-center items-start group shadow-sm hover:shadow-xl transition-all"
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="md:col-span-4 bg-sigma-dark/40 backdrop-blur-sm p-10 lg:p-14 rounded-[2.5rem] shadow-2xl relative overflow-hidden group border border-white/10 mt-8 mb-4 min-h-[300px] flex items-center"
             >
-              <h4 className="text-2xl font-black font-display text-sigma-dark leading-tight mb-4">Sua empresa pode ser o próximo case de sucesso.</h4>
-              <Link href="https://wa.me/554933220000" className="inline-flex items-center text-sm font-bold bg-sigma-dark text-white px-6 py-3 rounded-full hover:bg-sigma-dark/90 transition-all">
-                Conhecer soluções <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+              <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-sigma-orange/10 to-transparent z-0"></div>
+              
+              <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 w-full text-center lg:text-left">
+                <div className="max-w-xl">
+                  <h2 className="text-3xl lg:text-4xl font-bold font-display text-white tracking-tight mb-4">
+                    Pronto para falar com o time comercial da Sigma<span className="text-sigma-orange">PDV</span>?
+                  </h2>
+                  <p className="text-base lg:text-lg text-white/70 font-body leading-relaxed">
+                    Converse com um consultor e descubra quais sistemas, equipamentos e serviços fazem mais sentido para o seu negócio.
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-center shrink-0">
+                  <Link 
+                    href="https://wa.me/554989022868" 
+                    target="_blank" 
+                    className="inline-flex items-center justify-center bg-sigma-orange text-sigma-dark px-10 py-5 rounded-full text-lg font-black hover:bg-sigma-orange/90 transition-all shadow-[0_10px_30px_rgba(242,101,34,0.3)] group"
+                  >
+                    Falar com o time comercial
+                    <MessageCircle className="ml-2 w-6 h-6 group-hover:scale-110 transition-transform" />
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -825,7 +824,7 @@ export default function AppleStyleHome() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedImage(null)}
-            className="fixed inset-0 z-[100] bg-sigma-dark/95 backdrop-blur-md flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -842,7 +841,7 @@ export default function AppleStyleHome() {
                 FECHAR <X className="w-6 h-6" />
               </button>
               
-              <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 ring-1 ring-white/5 bg-sigma-dark flex items-center justify-center">
+              <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 ring-1 ring-white/5 bg-black flex items-center justify-center">
                 <img 
                   src={selectedImage} 
                   alt="Visualização" 
@@ -854,40 +853,6 @@ export default function AppleStyleHome() {
         )}
       </AnimatePresence>
 
-      {/* =========================================
-          CONTATO COMERCIAL (Fechamento da Home)
-          ========================================= */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-white pt-16 pb-32"
-      >
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="bg-sigma-dark p-10 lg:p-14 rounded-[2rem] shadow-xl relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-sigma-orange/10 to-transparent z-0 transition-opacity duration-500"></div>
-
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
-              <div className="max-w-xl">
-                <h2 className="text-3xl lg:text-4xl font-bold font-display text-white tracking-tight mb-4">
-                  Pronto para falar com o time comercial da Sigma<span className="text-sigma-orange">PDV</span>?
-                </h2>
-                <p className="text-base lg:text-lg text-white/70 font-body leading-relaxed">
-                  Converse com um consultor e descubra quais sistemas, equipamentos e serviços fazem mais sentido para o seu negócio.
-                </p>
-              </div>
-
-              <Button asChild size="lg" variant="primary">
-                <a href="https://wa.me/554933220000" target="_blank" rel="noopener noreferrer">
-                  Falar com o time comercial
-                  <MessageCircle className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </motion.section>
 
     </main>
   );

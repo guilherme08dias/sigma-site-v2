@@ -49,7 +49,7 @@ export default function CorporateHardware() {
               Muito além do caixa: a SigmaPDV fornece e instala toda a base tecnológica necessária para sua loja funcionar com 100% de disponibilidade, segurança e performance.
             </p>
             <a 
-              href="https://wa.me/555186302711?text=Ol%C3%A1%21+Gostaria+de+uma+consultoria+técnica+sobre+infraestrutura+de+TI+que+vi+no+site."
+              href="https://wa.me/554989022868?text=Ol%C3%A1%21+Gostaria+de+uma+consultoria+técnica+sobre+infraestrutura+de+TI+que+vi+no+site."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full px-8 h-14 bg-sigma-cyan text-sigma-dark font-bold hover:bg-sigma-cyan/90 shadow-lg shadow-sigma-cyan/20 w-full md:w-auto transition-all"

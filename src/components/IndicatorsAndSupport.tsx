@@ -117,7 +117,7 @@ export function IndicatorsAndSupport() {
                             <h3 className="text-xl font-bold text-sigma-dark mb-2">WhatsApp Direto</h3>
                             <p className="text-gray-500 text-sm mb-6 flex-grow">Fale diretamente com os técnicos responsáveis pela sua região.</p>
                             <Button asChild variant="subtle" className="border-sigma-cyan/70 text-sigma-cyan hover:bg-sigma-cyan/5 font-bold w-full">
-                                <a href="https://wa.me/554930252525" target="_blank" rel="noopener noreferrer">
+                                <a href="https://wa.me/554989022868" target="_blank" rel="noopener noreferrer">
                                     Iniciar Chat <ArrowRight />
                                 </a>
                             </Button>

@@ -5,19 +5,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: 'https://sigmapdv.com.br',
             lastModified: new Date(),
-            changeFrequency: 'yearly',
+            changeFrequency: 'weekly',
             priority: 1,
         },
         {
             url: 'https://sigmapdv.com.br/sistemas',
             lastModified: new Date(),
-            changeFrequency: 'monthly',
+            changeFrequency: 'weekly',
             priority: 0.9,
         },
         {
             url: 'https://sigmapdv.com.br/automacao-comercial',
             lastModified: new Date(),
-            changeFrequency: 'monthly',
+            changeFrequency: 'weekly',
             priority: 0.9,
         },
         {
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: 'https://sigmapdv.com.br/sobre-nos',
             lastModified: new Date(),
-            changeFrequency: 'yearly',
+            changeFrequency: 'monthly',
             priority: 0.7,
         },
     ]

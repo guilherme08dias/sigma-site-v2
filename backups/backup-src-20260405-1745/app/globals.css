@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-sigma-orange: #FF6600;
+  --color-sigma-orange-hover: #e65c00;
+  --color-sigma-dark: #1E272E;
+  --color-sigma-light: #F6F6F8;
+  --color-sigma-silver: #D1D1D1;
+  --color-sigma-cyan: #00E5E5;
+  --color-sigma-text: #1E272E;
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Marquee Animations */
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee2: marquee 40s linear infinite;
+  --animate-marquee-loop: marquee-loop 60s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/*
+  The default theme is "light" where:
+  Background: f5f6fA (sigma-light)
+  Foreground: 1E272E (sigma-dark)
+*/
+:root {
+  --background: #f5f6fA;
+  --foreground: #1E272E;
+  --radius: 0.25rem;
+}
+
+/*
+  The dark theme maps:
+  Background: 1E272E (sigma-dark)
+  Foreground: f5f6fA (sigma-light)
+*/
+.dark {
+  --background: #1E272E;
+  --foreground: #f5f6fA;
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased font-body transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

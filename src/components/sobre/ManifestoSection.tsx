@@ -40,32 +40,24 @@ export default function ManifestoSection() {
   return (
     <section className="py-24 px-6 lg:px-20 bg-sigma-light" id="o-que-fazemos">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-16 items-start mb-20">
-          
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="lg:col-span-4 lg:sticky lg:top-32"
-          >
-            <h2 className="text-4xl md:text-6xl font-black font-display tracking-tight text-sigma-dark mb-4">O que fazemos</h2>
-            <div className="w-20 h-1.5 bg-sigma-orange rounded-full"></div>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="lg:col-span-8 flex flex-col gap-8"
-          >
-            <p className="text-2xl lg:text-3xl font-body tracking-tight text-sigma-dark/90 leading-snug">
-              Nosso trabalho vai além da implantação de tecnologia: entregamos <span className="text-sigma-orange font-black">organização, controle e eficiência</span>, com atendimento próximo e suporte especializado para cada etapa do negócio.
-            </p>
-            <p className="text-xl text-sigma-dark/60 font-body leading-relaxed">
-              Mais do que tecnologia, construímos parcerias de longo prazo, focadas em segurança, crescimento e resultados reais para nossos clientes.
-            </p>
-          </motion.div>
+        <div className="mb-24">
+          <span className="text-sigma-dark/30 font-bold font-body tracking-widest uppercase text-sm block mb-6">O que fazemos</span>
+          <div className="flex flex-col lg:flex-row items-center gap-12 text-left">
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl lg:text-4xl font-bold text-sigma-dark font-display tracking-tight leading-[1.2]">
+                Além da tecnologia: entregamos<br /> 
+                <span className="text-sigma-orange font-black">resultado e eficiência</span>
+              </h2>
+            </div>
+            
+            <div className="hidden lg:block w-px h-28 bg-sigma-orange/40 self-center"></div>
+            
+            <div className="lg:w-1/2">
+              <p className="text-lg text-sigma-dark/60 font-body leading-relaxed max-w-lg">
+                Nosso trabalho vai além da implantação de tecnologia: entregamos organização, controle e eficiência, com atendimento próximo e suporte especializado para cada etapa do negócio.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

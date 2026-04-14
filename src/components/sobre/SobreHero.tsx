@@ -53,8 +53,8 @@ export default function SobreHero() {
             <div className="absolute inset-0 bg-gradient-to-t from-sigma-dark/20 via-transparent to-transparent z-10 pointer-events-none"></div>
             <img 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              alt="Equipe SigmaPDV atendendo cliente em Chapecó" 
-              src="/sobrenos-bg.jpg"
+              alt="Fachada da loja SigmaPDV em Chapecó" 
+              src="/fachada da loja.png"
             />
           </div>
           

@@ -17,8 +17,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sigmapdv.com.br"),
   title: "SigmaPDV | Sistemas de Gestão e Automação Comercial no Oeste SC",
   description: "Soluções completas em automação comercial para o varejo. Sistemas de gestão, equipamentos PDV, controle de condomínio e suporte técnico em Chapecó e região.",
+  openGraph: {
+    title: "SigmaPDV | Automação Comercial em Chapecó e Região",
+    description: "Sistemas Uniplus, controle de ponto Secullum, equipamentos PDV, infraestrutura de TI e suporte técnico.",
+    url: "https://sigmapdv.com.br",
+    siteName: "SigmaPDV",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SigmaPDV | Automação Comercial",
+    description: "Soluções completas para gestão e PDV no Oeste Catarinense.",
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
@@ -33,22 +50,35 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "SigmaPDV",
-              "image": "https://sigmapdv.com.br/logo.png",
-              "@id": "https://sigmapdv.com.br",
-              "url": "https://sigmapdv.com.br",
-              "telephone": "+555186302711",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Chapecó",
-                "addressRegion": "SC",
-                "addressCountry": "BR"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "SigmaPDV",
+                "image": "https://sigmapdv.com.br/logo.png",
+                "@id": "https://sigmapdv.com.br",
+                "url": "https://sigmapdv.com.br",
+                "telephone": "+5549991161576",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Chapecó",
+                  "addressRegion": "SC",
+                  "addressCountry": "BR"
+                },
+                "description": "Sistemas de Gestão e Automação Comercial no Oeste de SC."
               },
-              "description": "Sistemas de Gestão e Automação Comercial no Oeste de SC."
-            })
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "SigmaPDV",
+                "url": "https://sigmapdv.com.br",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "{search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ])
           }}
         />
       </head>

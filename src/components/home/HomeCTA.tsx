@@ -15,7 +15,7 @@ export default function HomeCTA() {
             </Link>
           </Button>
           <Button asChild variant="ghost" size="lg">
-            <a href="https://wa.me/554930252525" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/554989022868" target="_blank" rel="noopener noreferrer">
               Falar com Vendas
               <MessageCircle className="ml-2 w-5 h-5" />
             </a>

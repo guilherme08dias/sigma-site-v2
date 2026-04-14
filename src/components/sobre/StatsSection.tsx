@@ -27,7 +27,7 @@ export default function StatsSection() {
               >
                 <div className="text-sigma-orange text-5xl md:text-6xl font-black font-display tracking-tight">{stat.value}</div>
                 <div className="text-white text-xl font-bold font-body">{stat.label}</div>
-                <div className="w-12 h-1.5 bg-sigma-cyan mx-auto mt-2 rounded-full"></div>
+                <div className="w-12 h-1.5 bg-sigma-orange mx-auto mt-2 rounded-full"></div>
               </motion.div>
             ))}
           </div>

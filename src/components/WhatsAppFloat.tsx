@@ -59,8 +59,8 @@ export default function WhatsAppFloat() {
     },
     {
       label: "Comercial",
-      number: "5551986302711",
-      message: "Olá! Gostaria de informações comerciais.",
+      number: "554989022868",
+      message: "Olá Rodrigo! Gostaria de informações comerciais sobre as soluções da SigmaPDV.",
       icon: "storefront",
       color: "#128C7E",
     },

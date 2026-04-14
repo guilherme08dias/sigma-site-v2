@@ -61,15 +61,9 @@ export function FooterExpanded() {
                                 <span>Av. São Pedro, 1234E - São Cristovão, Chapecó - SC</span>
                             </li>
                             <li>
-                                <a href="tel:555186302711" className="flex items-center gap-3 text-white/60 hover:text-sigma-orange transition-colors text-sm">
+                                <a href="tel:5549991161576" className="flex items-center gap-3 text-white/60 hover:text-sigma-orange transition-colors text-sm">
                                     <Phone className="w-5 h-5 shrink-0 text-sigma-orange" />
-                                    <span>(51) 8630-2711</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:contato@sigmapdv.com.br" className="flex items-center gap-3 text-white/60 hover:text-sigma-orange transition-colors text-sm">
-                                    <Mail className="w-5 h-5 shrink-0 text-sigma-orange" />
-                                    <span>contato@sigmapdv.com.br</span>
+                                    <span>(49) 99116-1576</span>
                                 </a>
                             </li>
                         </ul>

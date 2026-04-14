@@ -56,7 +56,7 @@ export function UniplusSection() {
                         </h2>
 
                         <p className="text-lg text-gray-400 mb-10 leading-relaxed max-w-xl">
-                            A solução completa para sua gestão fiscal e operacional, adaptável a diversos segmentos do mercado com máxima eficiência.
+                            A solução definitiva para sua gestão fiscal e operacional, agora com integração total via web. Adaptável a qualquer dispositivo e segmento, oferecendo máxima eficiência e mobilidade.
                         </p>
 
                         <div className="grid grid-cols-2 gap-4 mb-12">
@@ -84,7 +84,7 @@ export function UniplusSection() {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-[#FFD1B3] aspect-[4/3] flex items-center justify-center p-8">
                             {/* Usando uma imagem temporária/mock baseado no briefing até que a imagem final chegue. No html havia referências de mockups*/}
                             <Image
-                                src="/screen.jpg" // Note: we'll check if this exists, else it might break. Assuming it exists based on briefing
+                                src="/uniplus-bg.jpeg"
                                 alt="Uniplus ERP Interface"
                                 width={800}
                                 height={600}

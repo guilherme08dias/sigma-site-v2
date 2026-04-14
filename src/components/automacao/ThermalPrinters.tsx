@@ -157,7 +157,7 @@ export default function ThermalPrinters() {
                 </div>
 
                 <a
-                  href={`https://wa.me/555186302711?text=Ol%C3%A1%21+Tenho+interesse+na+impressora+${encodeURIComponent(printer.title)}+que+vi+no+site+da+Sigma.`}
+                  href={`https://wa.me/554989022868?text=Ol%C3%A1%21+Tenho+interesse+na+impressora+${encodeURIComponent(printer.title)}+que+vi+no+site+da+Sigma.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-12 w-full py-4 px-6 rounded-full border-2 border-sigma-orange text-sigma-orange font-bold hover:bg-sigma-orange hover:text-white transition-all duration-300 flex items-center justify-center gap-2"

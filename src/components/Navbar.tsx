@@ -52,7 +52,7 @@ export function Navbar() {
                         <ThemeToggle />
 
                         <a
-                            href="https://wa.me/5511999999999?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento"
+                            href="https://wa.me/554989022868?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-neutral-900 bg-primary hover:bg-primary-dark rounded-sm transition-colors"
@@ -95,7 +95,7 @@ export function Navbar() {
                                 </Link>
                             ))}
                             <a
-                                href="https://wa.me/5511999999999?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento"
+                                href="https://wa.me/554989022868?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center w-full px-4 py-3 mt-6 text-sm font-bold text-neutral-900 bg-primary hover:bg-primary-dark rounded-sm transition-colors"

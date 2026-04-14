@@ -52,8 +52,8 @@ export default function DiferenciaisSection() {
         <div className="lg:w-2/3 flex flex-col gap-8">
           {diferenciais.map((item, idx) => (
             <div key={idx} className="group flex flex-col md:flex-row gap-8 p-8 md:p-12 bg-sigma-light rounded-[2.5rem] border border-sigma-dark/5 hover:border-sigma-orange/20 transition-all duration-500 hover:shadow-xl hover:shadow-sigma-orange/5 hover:-translate-y-1">
-              <div className="w-16 h-16 shrink-0 bg-white rounded-2xl shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="material-symbols-outlined text-sigma-orange text-4xl">
+              <div className="w-20 h-20 shrink-0 bg-white rounded-3xl shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-outlined text-sigma-orange text-5xl">
                   {item.icon}
                 </span>
               </div>

@@ -1,13 +1,24 @@
 import HeroAutomacao from "@/components/automacao/HeroAutomacao";
 import TouchMonitors from "@/components/automacao/TouchMonitors";
+import SelfServiceKiosk from "@/components/automacao/SelfServiceKiosk";
 import ThermalPrinters from "@/components/automacao/ThermalPrinters";
 import LabelPrinters from "@/components/automacao/LabelPrinters";
 import CorporateHardware from "@/components/automacao/CorporateHardware";
+import PerifericosEssenciais from "@/components/automacao/PerifericosEssenciais";
+import HardwarePonto from "@/components/sistemas/HardwarePonto";
 
 export const metadata = {
   title: 'Automação Comercial SigmaPDV | Impressoras, Monitores Touch e Hardware para Varejo',
   description:
     'Monitores touch, impressoras térmicas e de etiquetas, leitores e infraestrutura de rede selecionados para mercados, lojas e restaurantes. Automação comercial integrada aos sistemas da SigmaPDV, com suporte local em Chapecó.',
+  openGraph: {
+    title: 'Automação Comercial SigmaPDV',
+    description: 'Hardware completo para varejo: impressoras, monitores touch, e totens.',
+    url: 'https://sigmapdv.com.br/automacao-comercial',
+  },
+  alternates: {
+    canonical: '/automacao-comercial',
+  },
 };
 
 import Script from "next/script";
@@ -61,9 +72,20 @@ export default function AutomacaoComercialPage() {
       />
       <HeroAutomacao />
       <TouchMonitors />
-      <ThermalPrinters />
-      <LabelPrinters />
-      <CorporateHardware />
+      <SelfServiceKiosk />
+      <div id="impressoras">
+        <ThermalPrinters />
+        <LabelPrinters />
+      </div>
+      <div id="perifericos">
+        <PerifericosEssenciais />
+      </div>
+      <div id="ponto">
+        <HardwarePonto />
+      </div>
+      <div id="acesso">
+        <CorporateHardware />
+      </div>
     </>
   );
 }

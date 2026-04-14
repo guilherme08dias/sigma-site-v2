@@ -48,9 +48,9 @@ export default function SecullumSection() {
           >
             <div className="absolute inset-0 bg-sigma-cyan/20 blur-[100px] rounded-full scale-75 -z-10 pointer-events-none"></div>
             <img 
-              alt="Smartphone mockup displaying Secullum mobile application" 
+              alt="Secullum Ponto e Gestão de Acesso" 
               className="relative z-10 w-full rounded-[2.5rem] shadow-2xl border border-white/10" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbFvP2_X5APfrVbFyzRogAgZntpR4AZkoPjn5VW2qMPkssf24ij1auwTXCldTUSoOEm4v3eokId_meTB63TJiugg8qs5-pgJ5wC22gBDxvrDYfqhDhDybJ3V0hxTFIIJG9IL0hml34hw1RyBSpAmRVqYuWpEjx9qaI_aX6AY0HINWcIRrr2rFkt1LgXf41F8WZrkpVGtH_KW2HSHBNOPMOsBGuFW347MGSXIwDoNnj1MywSPOV4qzZ4cifJPpN2o4EEHMVW0FRA3Y"
+              src="/Secullum-bg.jpeg"
             />
           </motion.div>
           

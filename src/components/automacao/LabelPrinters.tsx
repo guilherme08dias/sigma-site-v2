@@ -151,7 +151,7 @@ export default function LabelPrinters() {
                 </div>
 
                 <a
-                  href={`https://wa.me/555186302711?text=Ol%C3%A1%21+Tenho+interesse+no+modelo+${encodeURIComponent(printer.title)}+que+vi+no+site+da+Sigma.`}
+                  href={`https://wa.me/554989022868?text=Ol%C3%A1%21+Tenho+interesse+no+modelo+${encodeURIComponent(printer.title)}+que+vi+no+site+da+Sigma.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-12 w-full py-4 px-6 rounded-full border-2 border-sigma-orange text-sigma-orange font-bold hover:bg-sigma-orange hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
@@ -204,7 +204,7 @@ export default function LabelPrinters() {
               </div>
 
               <a
-                href={`https://wa.me/555186302711?text=Ol%C3%A1%21+Tenho+interesse+no+modelo+industrial+${encodeURIComponent(featuredPrinter.title)}+que+vi+no+site+da+Sigma.`}
+                href={`https://wa.me/554989022868?text=Ol%C3%A1%21+Tenho+interesse+no+modelo+industrial+${encodeURIComponent(featuredPrinter.title)}+que+vi+no+site+da+Sigma.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-12 w-full md:w-auto md:self-end py-4 px-8 rounded-full border-2 border-sigma-orange text-sigma-orange font-bold hover:bg-sigma-orange hover:text-white transition-all duration-300 flex items-center justify-center gap-2"

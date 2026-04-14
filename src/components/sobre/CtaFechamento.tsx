@@ -34,7 +34,7 @@ export default function CtaFechamento() {
 
           <div className="flex flex-col sm:flex-row gap-5 pt-4">
             <a
-              href="https://wa.me/5549991161576?text=Olá!%20Gostaria%20de%20conhecer%20as%20soluções%20SigmaPDV."
+              href="https://wa.me/554989022868?text=Olá!%20Gostaria%20de%20conhecer%20as%20soluções%20SigmaPDV."
               target="_blank"
               rel="noopener noreferrer"
             >

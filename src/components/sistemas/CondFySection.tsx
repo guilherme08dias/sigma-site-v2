@@ -56,13 +56,13 @@ export default function CondFySection() {
           >
             <div className="absolute inset-0 bg-sigma-orange/20 blur-[100px] rounded-full scale-75 -z-10 pointer-events-none"></div>
             <img 
-              alt="Plataforma CondFy mockup de gestão" 
+              alt="Aplicativo CondFy rodando em smartphone para gestão de condomínios em Chapecó" 
               className="relative z-10 w-full rounded-[2.5rem] shadow-2xl border border-white/10" 
               src="/condfy_mockup.png"
             />
             {/* Floating logo or decoration */}
             <div className="absolute -top-10 -right-10 w-32 h-32 bg-white p-6 rounded-3xl shadow-xl z-20 flex items-center justify-center rotate-12 hidden md:flex">
-              <img src="/condfy.svg" alt="CondFy Logo" className="w-full h-full object-contain" />
+              <img src="/condfy.svg" alt="Logotipo do Sistema CondFy para Controle de Acesso Condominial" className="w-full h-full object-contain" />
             </div>
           </motion.div>
         </div>

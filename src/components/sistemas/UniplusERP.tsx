@@ -29,7 +29,7 @@ export default function UniplusERP() {
     { icon: "receipt_long", title: "Fiscal", desc: "Conformidade total" },
     { icon: "settings_suggest", title: "Operacional", desc: "Eficiência máxima" },
     { icon: "shopping_cart", title: "Vendas", desc: "Resultados ágeis" },
-    { icon: "smartphone", title: "Mobile", desc: "Gestão na palma" }
+    { icon: "language", title: "Acesso Web", desc: "Gestão por navegador" }
   ];
 
   return (
@@ -46,7 +46,7 @@ export default function UniplusERP() {
             <span className="text-sigma-orange font-bold font-body tracking-widest text-sm uppercase mb-4 block">Gestão Empresarial</span>
             <h1 className="text-4xl md:text-5xl leading-tight font-black font-display tracking-tight text-white mb-6">Uniplus ERP: Gestão Modular que Evolui com seu Negócio</h1>
             <p className="text-white/70 font-body text-xl leading-relaxed max-w-xl">
-              Sabemos que cada dia à frente de um negócio exige agilidade e controle total. O Uniplus ERP foi desenvolvido para ser o coração da sua gestão, integrando vendas, estoque e financeiro em uma plataforma modular e intuitiva. Seja para um mercado, restaurante ou prestadora de serviços, o sistema elimina o retrabalho e garante total segurança fiscal. Com o Uniplus, você simplifica processos complexos e ganha tempo para focar no crescimento estratégico da sua empresa.
+              O Uniplus Web leva todo o poder da gestão empresarial para o seu navegador. Desenvolvido para ser o coração do seu negócio, ele integra vendas, estoque e financeiro em uma plataforma modular acessível de qualquer dispositivo — PC, Mac, Tablet ou Smartphone. Com Dashboards personalizáveis e total segurança fiscal, o Uniplus elimina o retrabalho e garante controle absoluto da sua operação, seja em um mercado, restaurante ou prestadora de serviços. Simplifique processos complexos e foque no que realmente importa: o crescimento estratégico da sua empresa.
             </p>
           </motion.div>
           
@@ -58,9 +58,9 @@ export default function UniplusERP() {
           >
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sigma-orange/20 rounded-full blur-[100px] pointer-events-none"></div>
             <img 
-              alt="Multi-device mockup showing Uniplus ERP dashboard on tablet and desktop" 
+              alt="Uniplus ERP Dashboard" 
               className="relative z-10 w-full rounded-[2.5rem] shadow-2xl border border-white/10" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeJHzxDiro83vBqHZfHx7vOkG-XBRHBeQJ0Ya8t_jiAaxm2F8vGK5-bAAg7AeYMdDCxAFa3RajIVLp2m7VjyTY1ppVgAek1Rg7hSzfgma0xM0fvePWYEC0pxcY-UnrmmVQnx_bIQc2rhqUPZhlox0fl7JupyJ9ko3yBk8tJnkhBg-NJqZ5sk08TeBDt6WoxYedOkTF7FUy7QPbUIBDasMkKYuWyVpCCLEedq45Ijx9hRYY7VGLRzDuYwZa4cqEUPeXI3AA9nhr_Ow"
+              src="/uniplus-bg.jpeg"
             />
           </motion.div>
         </div>
