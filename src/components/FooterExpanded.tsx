@@ -1,8 +1,38 @@
 "use client";
 
-import { MapPin, Phone, Mail, Instagram, Linkedin } from "lucide-react";
+import { useState } from "react";
+import { MapPin, Phone, Instagram, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Logo from "@/components/Logo";
+
+function FooterAccordion({ title, children }: { title: string; children: React.ReactNode }) {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <div className="border-b border-white/10 lg:border-none">
+            {/* Mobile: Botão sanfona | Desktop: Título estático */}
+            <button
+                onClick={() => setOpen(!open)}
+                className="flex items-center justify-between w-full py-4 lg:py-0 lg:mb-6 lg:cursor-default"
+                aria-expanded={open}
+            >
+                <h4 className="text-white font-bold tracking-wide text-sm uppercase">{title}</h4>
+                <ChevronDown
+                    className={`w-4 h-4 text-white/40 transition-transform duration-300 lg:hidden ${open ? "rotate-180" : ""}`}
+                />
+            </button>
+
+            {/* Mobile: Conteúdo colapsável | Desktop: Sempre visível */}
+            <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out lg:!max-h-[500px] lg:!opacity-100 lg:!pb-0 ${
+                    open ? "max-h-[500px] opacity-100 pb-4" : "max-h-0 opacity-0"
+                }`}
+            >
+                {children}
+            </div>
+        </div>
+    );
+}
 
 export function FooterExpanded() {
     return (
@@ -10,10 +40,10 @@ export function FooterExpanded() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
                 {/* Footer Links Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-12 mb-16">
 
-                    {/* Brand Col */}
-                    <div className="lg:col-span-2">
+                    {/* Brand Col - Sempre visível */}
+                    <div className="lg:col-span-2 pb-8 mb-4 border-b border-white/10 lg:border-none lg:pb-0 lg:mb-0">
                         <div className="mb-6">
                             <Logo variant="negative" />
                         </div>
@@ -24,37 +54,30 @@ export function FooterExpanded() {
                             <a href="https://www.instagram.com/sigmapdv/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-sigma-orange hover:text-white transition-all">
                                 <Instagram className="w-5 h-5" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-sigma-orange hover:text-white transition-all">
-                                <Linkedin className="w-5 h-5" />
-                            </a>
                         </div>
                     </div>
 
                     {/* Soluções */}
-                    <div>
-                        <h4 className="text-white font-bold mb-6 tracking-wide text-sm uppercase">Soluções</h4>
+                    <FooterAccordion title="Soluções">
                         <ul className="space-y-3">
                             <li><Link href="/automacao-comercial" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Automação Comercial</Link></li>
                             <li><Link href="/sistemas" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Sistemas de Gestão</Link></li>
-                            <li><Link href="/automacao-comercial#equipamentos" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Equipamentos e PDV</Link></li>
+                            <li><Link href="/automacao-comercial#perifericos" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Equipamentos e PDV</Link></li>
                             <li><Link href="/suporte" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Suporte Técnico</Link></li>
                         </ul>
-                    </div>
+                    </FooterAccordion>
 
                     {/* A Empresa */}
-                    <div>
-                        <h4 className="text-white font-bold mb-6 tracking-wide text-sm uppercase">A Empresa</h4>
+                    <FooterAccordion title="A Empresa">
                         <ul className="space-y-3">
                             <li><Link href="/sobre-nos" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Sobre Nós</Link></li>
                             <li><Link href="/sobre-nos#diferenciais" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Diferenciais</Link></li>
-                            <li><Link href="/sobre-nos#depoimentos" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Depoimentos</Link></li>
                             <li><Link href="/suporte#canais" className="text-white/60 hover:text-sigma-orange transition-colors text-sm">Canais de Atendimento</Link></li>
                         </ul>
-                    </div>
+                    </FooterAccordion>
 
                     {/* Contato */}
-                    <div>
-                        <h4 className="text-white font-bold mb-6 tracking-wide text-sm uppercase">Contato</h4>
+                    <FooterAccordion title="Contato">
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-white/60 text-sm">
                                 <MapPin className="w-5 h-5 shrink-0 text-sigma-orange mt-0.5" />
@@ -67,7 +90,7 @@ export function FooterExpanded() {
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </FooterAccordion>
 
                 </div>
 
@@ -86,4 +109,3 @@ export function FooterExpanded() {
         </footer>
     );
 }
-

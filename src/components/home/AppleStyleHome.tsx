@@ -54,7 +54,7 @@ export default function AppleStyleHome() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <main className="min-h-screen font-body flex flex-col selection:bg-sigma-orange selection:text-white">
+    <main className="min-h-screen font-body flex flex-col selection:bg-sigma-orange selection:text-white overflow-x-hidden">
 
       {/* =========================================
           HERO
@@ -88,24 +88,24 @@ export default function AppleStyleHome() {
             className="flex flex-col gap-6 max-w-2xl px-2"
           >
 
-            <h1 className="text-5xl md:text-7xl font-black text-sigma-dark font-display flex flex-col leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-sigma-dark font-display flex flex-col leading-[1.1] tracking-tight">
               <span className="mb-2 text-sigma-dark">
                 Sigma<span className="text-sigma-orange">PDV</span>
               </span>
-              <span className="text-2xl md:text-3xl font-semibold text-sigma-dark/90 mt-2">
+              <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-sigma-dark/90 mt-2">
                 Automação Comercial <span className="text-sigma-orange">de Alta Performance</span>
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-sigma-dark font-medium font-body leading-relaxed max-w-xl drop-shadow-sm">
+            <p className="text-base sm:text-lg md:text-xl text-sigma-dark font-medium font-body leading-relaxed max-w-xl drop-shadow-sm">
               Somos referência em tecnologia e automação comercial na região Oeste de Santa Catarina. Nossa missão é entregar soluções completas e suporte técnico especializado para trazer mais organização, controle e crescimento ao seu PDV.
             </p>
 
-            <div className="flex flex-wrap gap-5 pt-8 pb-4">
-              <Button asChild variant="primary" size="lg" className="rounded-full px-8 shadow-xl shadow-sigma-orange/20">
-                <Link href="/sistemas">Ver Sistemas de Gestão <Rocket className="ml-2 w-5 h-5" /></Link>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 pt-8 pb-4 w-full">
+              <Button asChild variant="primary" size="lg" className="rounded-full px-6 sm:px-8 shadow-xl shadow-sigma-orange/20 w-full sm:w-auto h-auto py-4 sm:py-3 whitespace-normal justify-center text-center">
+                <Link href="/sistemas" className="flex items-center justify-center">Ver Sistemas de Gestão <Rocket className="ml-2 w-5 h-5 flex-shrink-0" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full bg-white/5 hover:bg-white/20 backdrop-blur-md border-sigma-dark/20 text-sigma-dark px-8 hover:border-sigma-orange hover:text-sigma-orange transition-all duration-300">
-                <Link href="/automacao-comercial">Equipamentos para PDV</Link>
+              <Button asChild variant="outline" size="lg" className="rounded-full bg-white/5 hover:bg-white/20 backdrop-blur-md border-sigma-dark/20 text-sigma-dark px-6 sm:px-8 hover:border-sigma-orange hover:text-sigma-orange transition-all duration-300 w-full sm:w-auto h-auto py-4 sm:py-3 whitespace-normal justify-center text-center">
+                <Link href="/automacao-comercial" className="flex items-center justify-center">Equipamentos para PDV</Link>
               </Button>
             </div>
           </motion.div>
@@ -120,7 +120,7 @@ export default function AppleStyleHome() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-sigma-light pb-32 pt-24 relative z-10 -mt-20 rounded-t-[4rem] border-t border-white/50 shadow-[0_-20px_40px_rgba(0,0,0,0.03)]"
+        className="bg-sigma-light pb-20 md:pb-32 pt-16 md:pt-24 relative z-10 -mt-8 md:-mt-20 rounded-t-[2rem] md:rounded-t-[4rem] border-t border-white/50 shadow-[0_-20px_40px_rgba(0,0,0,0.03)]"
       >
 
         {/* Mover Faixa de Logos para cá (Apple Style Transition) */}
@@ -128,14 +128,14 @@ export default function AppleStyleHome() {
           <p className="text-center text-[10px] md:text-xs font-bold text-sigma-dark/30 uppercase tracking-[0.4em] mb-12">
             Equipamentos e Softwares de alta performance
           </p>
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden -mx-8 lg:mx-0">
             {/* Gradiente esquerdo */}
-            <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-sigma-light to-transparent z-10 pointer-events-none" />
+            <div className="absolute -left-2 top-0 bottom-0 w-32 md:w-40 bg-gradient-to-r from-sigma-light via-sigma-light/90 to-transparent z-10 pointer-events-none" />
             {/* Gradiente direito */}
-            <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-sigma-light to-transparent z-10 pointer-events-none" />
+            <div className="absolute -right-2 top-0 bottom-0 w-32 md:w-40 bg-gradient-to-l from-sigma-light via-sigma-light/90 to-transparent z-10 pointer-events-none" />
 
             {/* Container único: logos + clone, animação move -50% (= 1 cópia) */}
-            <div className="animate-marquee-loop flex gap-24 w-max">
+            <div className="animate-marquee-loop flex gap-24 w-max px-8 lg:px-0">
               {[
                 /* Ordem: intercala marcas de hardware, software e parceiros */
                 "UNIPLUS", "HENRY", "INTELBRAS", "AMD", "SECULLUM", "GIGABYTE", "FOURTECH",
@@ -159,7 +159,7 @@ export default function AppleStyleHome() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-sigma-dark font-display tracking-tight">Os Pilares do nosso Hub</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
             {[
               { icon: "point_of_sale", title: "Automação Comercial", desc: "Implantação de sistemas e soluções para mercados, lojas e empresas, focadas em controle, agilidade e eficiência operacional." },
               { icon: "analytics", title: "Sistemas e Software de Gestão", desc: "Soluções para gestão empresarial, frente de caixa, controle de vendas, estoque e relatórios." },
@@ -203,19 +203,35 @@ export default function AppleStyleHome() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-white py-32 border-y border-sigma-light"
+        className="bg-white py-16 md:py-32 border-y border-sigma-light"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-12">
-              <div>
-                <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-sigma-dark mb-6 font-display">
+          
+          {/* Mobile Only Title Block */}
+          <div className="block lg:hidden mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-sigma-dark mb-4 font-display leading-tight">
+              Gestão empresarial inteligente e segurança para o seu negócio
+            </h2>
+            <p className="text-base font-body text-sigma-dark/60 leading-relaxed">
+              Três plataformas que organizam a gestão do seu negócio, da operação de PDV ao controle de jornada e acesso, com implantação e suporte completos pela SigmaPDV.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            
+            {/* Texto e Detalhes da Coluna Esquerda no Desktop (Fica embaixo da img no mobile) */}
+            <div className="space-y-12 order-2 lg:order-1">
+              
+              {/* Desktop Only Title Block */}
+              <div className="hidden lg:block">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sigma-dark mb-6 font-display leading-tight">
                   Gestão empresarial inteligente e segurança para o seu negócio
                 </h2>
                 <p className="text-lg text-sigma-dark/60 leading-relaxed font-body">
                   Três plataformas que organizam a gestão do seu negócio, da operação de PDV ao controle de jornada e acesso, com implantação e suporte completos pela SigmaPDV.
                 </p>
               </div>
+
               <div className="space-y-8">
                 <div className="flex gap-6">
                   <MonitorSmartphone className="flex-shrink-0 w-8 h-8 text-sigma-orange mt-1" />
@@ -239,19 +255,22 @@ export default function AppleStyleHome() {
                   </div>
                 </div>
               </div>
-              <Button asChild variant="primary" className="rounded-full">
+              <Button asChild variant="primary" className="rounded-full w-full sm:w-auto text-center h-auto py-3">
                 <Link href="/sistemas">
                   Ver detalhes dos sistemas <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
             </div>
-            <div className="h-[500px] lg:h-[600px] w-full bg-sigma-light rounded-3xl border border-sigma-dark/5 flex items-center justify-center overflow-hidden relative shadow-sm hover:shadow-xl transition-all duration-300 group">
+            
+            {/* Div da Imagem: Sobe pro meio no mobile, Volta pra direita no desktop */}
+            <div className="order-1 lg:order-2 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full bg-sigma-light rounded-3xl border border-sigma-dark/5 flex items-center justify-center overflow-hidden relative shadow-sm hover:shadow-xl transition-all duration-300 group">
               <img
                 src="/sistemas_hero.jpg"
                 alt="Sistemas de Gestão"
                 className="object-cover w-full h-full transition-transform duration-700"
               />
             </div>
+
           </div>
         </div>
       </motion.section>
@@ -264,12 +283,12 @@ export default function AppleStyleHome() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-sigma-light py-32"
+        className="bg-sigma-light py-16 md:py-32"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
             <div className="lg:w-1/2 text-left">
-              <h2 className="text-4xl lg:text-5xl font-bold text-sigma-dark font-display tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-sigma-dark font-display tracking-tight">
                 Equipamentos e Serviços sob medida
               </h2>
             </div>
@@ -515,25 +534,45 @@ export default function AppleStyleHome() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-white py-32 border-y border-sigma-light"
+        className="bg-white py-16 md:py-32 border-y border-sigma-light"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1 h-[600px] w-full bg-sigma-light rounded-3xl border border-sigma-dark/5 flex justify-center items-center overflow-hidden">
+          
+          {/* Mobile Only Title Block */}
+          <div className="block lg:hidden mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sigma-orange/10 text-sigma-orange text-xs font-bold uppercase tracking-wider mb-6 font-display">
+              Solução para Condomínios
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold font-display text-sigma-dark tracking-tight mb-4 leading-tight break-words">
+              CondFy: controle inteligente de acesso para condomínios
+            </h2>
+            <p className="text-base font-body text-sigma-dark/60 leading-relaxed">
+              Gestão moderna de portaria, acessos e visitantes com app completo para moradores e administração.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            
+            {/* Image Container: Renderizado primeiro no Grid (Abaixo do titulo isolado no mobile, à esquerda no desktop) */}
+            <div className="order-1 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full bg-sigma-light rounded-3xl border border-sigma-dark/5 flex justify-center items-center overflow-hidden">
               <img src="/condfy.svg" alt="CondFy" className="w-full h-full object-contain p-8 md:p-12 drop-shadow-2xl" />
             </div>
-            <div className="space-y-12 order-1 lg:order-2">
-              <div>
+            
+            <div className="space-y-12 order-2">
+              
+              {/* Desktop Only Title Block (Preservado para a coluna da direita) */}
+              <div className="hidden lg:block">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sigma-orange/10 text-sigma-orange text-xs font-bold uppercase tracking-wider mb-6 font-display">
                   Solução para Condomínios
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold font-display text-sigma-dark tracking-tight mb-6">
+                <h2 className="text-3xl lg:text-5xl font-bold font-display text-sigma-dark tracking-tight mb-6 leading-tight break-words">
                   CondFy: controle inteligente de acesso para condomínios
                 </h2>
                 <p className="text-lg font-body text-sigma-dark/60 leading-relaxed">
                   Gestão moderna de portaria, acessos e visitantes com app completo para moradores e administração.
                 </p>
               </div>
+
               <ul className="space-y-8">
                 <li className="flex gap-6">
                   <Smartphone className="flex-shrink-0 w-7 h-7 text-[#564493] mt-1" />
@@ -548,9 +587,9 @@ export default function AppleStyleHome() {
                   <p className="text-sigma-dark/80">Plataforma em nuvem, escalável para condomínios de pequeno a grande porte.</p>
                 </li>
               </ul>
-              <Button asChild variant="primary" size="lg">
-                <Link href="/condominios">
-                  Ver solução CondFy para condomínios <ArrowRight className="ml-2 w-5 h-5" />
+              <Button asChild variant="primary" size="lg" className="w-full sm:w-auto h-auto py-3 whitespace-normal text-center bg-[#564493] hover:bg-[#48387a] text-white">
+                <Link href="https://wa.me/554989022868?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+solu%C3%A7%C3%A3o+CondFy." className="flex items-center justify-center gap-2">
+                  Ver solução CondFy <ArrowRight className="w-5 h-5 shrink-0" />
                 </Link>
               </Button>
             </div>
@@ -566,7 +605,7 @@ export default function AppleStyleHome() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-sigma-light py-32"
+        className="bg-sigma-light py-16 md:py-32"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-20">
@@ -576,7 +615,7 @@ export default function AppleStyleHome() {
 
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
-                <h2 className="text-4xl lg:text-6xl font-bold tracking-tight text-sigma-dark font-display max-w-xl">
+                <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sigma-dark font-display max-w-xl">
                   Suporte Técnico Ágil e Humano
                 </h2>
               </div>
@@ -593,7 +632,7 @@ export default function AppleStyleHome() {
           </div>
 
           <div className="grid lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-12 grid sm:grid-cols-3 gap-6">
+            <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
                   icon: Headphones,
@@ -674,11 +713,11 @@ export default function AppleStyleHome() {
           </div>
 
           {/* Logos Marquee Loop - Modo Dark com 10 logos atualizadas */}
-          <div className="relative overflow-hidden py-8 mb-20">
-            <div className="absolute left-0 top-0 bottom-0 w-24 md:w-60 bg-gradient-to-r from-black via-black/80 to-transparent z-20 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 md:w-60 bg-gradient-to-l from-black via-black/80 to-transparent z-20 pointer-events-none" />
+          <div className="relative overflow-hidden py-8 mb-20 -mx-8 lg:mx-0">
+            <div className="absolute -left-2 top-0 bottom-0 w-32 md:w-60 bg-gradient-to-r from-black via-black/95 to-transparent z-20 pointer-events-none" />
+            <div className="absolute -right-2 top-0 bottom-0 w-32 md:w-60 bg-gradient-to-l from-black via-black/95 to-transparent z-20 pointer-events-none" />
 
-            <div className="animate-marquee-loop flex gap-24 w-max h-40 items-center">
+            <div className="animate-marquee-loop flex gap-24 w-max h-40 items-center px-8 lg:px-0">
               {[
                 "SuperCenter", "proner", "moura", "brasao", "mepar", "Alberti",
                 "bertuol", "compretudo", "cristorei", "saborecia", "uruguai",
@@ -696,7 +735,7 @@ export default function AppleStyleHome() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[240px]">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[240px]">
             {/* Case: Brasão (Destaque Grande) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -780,39 +819,40 @@ export default function AppleStyleHome() {
                 <Maximize2 className="text-white opacity-0 group-hover:opacity-100 transition-all w-12 h-12" />
               </div>
             </motion.div>
-            {/* CTA Final: Integrado na seção de cases com o design preferido */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="md:col-span-4 bg-sigma-dark/40 backdrop-blur-sm p-10 lg:p-14 rounded-[2.5rem] shadow-2xl relative overflow-hidden group border border-white/10 mt-8 mb-4 min-h-[300px] flex items-center"
-            >
-              <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-sigma-orange/10 to-transparent z-0"></div>
-              
-              <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 w-full text-center lg:text-left">
-                <div className="max-w-xl">
-                  <h2 className="text-3xl lg:text-4xl font-bold font-display text-white tracking-tight mb-4">
-                    Pronto para falar com o time comercial da Sigma<span className="text-sigma-orange">PDV</span>?
-                  </h2>
-                  <p className="text-base lg:text-lg text-white/70 font-body leading-relaxed">
-                    Converse com um consultor e descubra quais sistemas, equipamentos e serviços fazem mais sentido para o seu negócio.
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-center shrink-0">
-                  <Link 
-                    href="https://wa.me/554989022868" 
-                    target="_blank" 
-                    className="inline-flex items-center justify-center bg-sigma-orange text-sigma-dark px-10 py-5 rounded-full text-lg font-black hover:bg-sigma-orange/90 transition-all shadow-[0_10px_30px_rgba(242,101,34,0.3)] group"
-                  >
-                    Falar com o time comercial
-                    <MessageCircle className="ml-2 w-6 h-6 group-hover:scale-110 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
           </div>
+          
+          {/* CTA Final: Integrado na seção de cases, mas fora do contexto Grid para evitar colapso WebKit */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="bg-sigma-dark/40 backdrop-blur-sm border border-white/10 p-8 sm:p-10 lg:p-14 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden group mt-8 w-full flex flex-col h-fit min-h-max"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-sigma-orange/5 to-transparent z-0 pointer-events-none"></div>
+            
+            <div className="relative z-10 block space-y-8 md:flex md:flex-row md:items-center md:justify-between md:space-y-0 md:gap-10">
+              <div className="text-center md:text-left max-w-2xl mx-auto md:mx-0">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white tracking-tight mb-4">
+                  Pronto para falar com o time comercial da Sigma<span className="text-sigma-orange">PDV</span>?
+                </h2>
+                <p className="text-base lg:text-lg text-white/70 font-body leading-relaxed">
+                  Converse com um consultor e descubra quais sistemas, equipamentos e serviços fazem mais sentido para o seu negócio.
+                </p>
+              </div>
+
+              <div className="shrink-0 w-full md:w-auto mt-6 md:mt-0">
+                <Link 
+                  href="https://wa.me/554989022868" 
+                  target="_blank" 
+                  className="flex justify-center items-center bg-sigma-orange text-sigma-dark px-8 py-4 sm:py-5 rounded-full text-base sm:text-lg font-black hover:bg-sigma-orange/90 transition-all shadow-[0_10px_30px_rgba(242,101,34,0.3)] w-full group"
+                >
+                  Falar com o time comercial
+                  <MessageCircle className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </motion.section>
 

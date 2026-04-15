@@ -13,6 +13,8 @@ const NAV_LINKS = [
       name: "Automação", 
       href: "/automacao-comercial",
       submenu: [
+        { name: "Monitores Touch", href: "/automacao-comercial#monitores-touch" },
+        { name: "Auto Atendimento", href: "/automacao-comercial#auto-atendimento" },
         { name: "Impressoras Térmicas", href: "/automacao-comercial#impressoras" },
         { name: "Leitores e Periféricos", href: "/automacao-comercial#perifericos" },
         { name: "Relógios de Ponto", href: "/automacao-comercial#ponto" },
@@ -165,7 +167,7 @@ export function Header() {
                                 <div key={link.name}>
                                     <Link
                                         href={link.href}
-                                        className="block text-lg font-bold text-sigma-dark hover:text-sigma-orange transition-colors"
+                                        className="block text-lg font-bold text-sigma-dark hover:text-sigma-orange transition-colors py-2"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.name}

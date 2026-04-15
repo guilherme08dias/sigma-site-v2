@@ -71,8 +71,12 @@ export default function AutomacaoComercialPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <HeroAutomacao />
-      <TouchMonitors />
-      <SelfServiceKiosk />
+      <div id="monitores-touch">
+        <TouchMonitors />
+      </div>
+      <div id="auto-atendimento">
+        <SelfServiceKiosk />
+      </div>
       <div id="impressoras">
         <ThermalPrinters />
         <LabelPrinters />

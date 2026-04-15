@@ -24,10 +24,10 @@ export default function SuporteCTA() {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
-            <button className="w-full sm:w-auto bg-sigma-orange hover:bg-sigma-orange/90 text-white px-10 py-5 rounded-full font-black text-lg transition-all shadow-lg shadow-sigma-orange/20 hover:-translate-y-1 hover:shadow-sigma-orange/40">
+            <button className="w-full sm:w-auto bg-sigma-orange hover:bg-sigma-orange/90 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full font-black text-base sm:text-lg transition-all shadow-lg shadow-sigma-orange/20 hover:-translate-y-1 hover:shadow-sigma-orange/40 whitespace-normal h-auto text-center flex items-center justify-center">
               Ver Catálogo de Hardware
             </button>
-            <button className="w-full sm:w-auto border-2 border-white/20 text-white hover:text-sigma-dark bg-transparent px-10 py-5 rounded-full font-black text-lg hover:bg-white transition-all hover:-translate-y-1">
+            <button className="w-full sm:w-auto border-2 border-white/20 text-white hover:text-sigma-dark bg-transparent px-6 sm:px-10 py-4 sm:py-5 rounded-full font-black text-base sm:text-lg hover:bg-white transition-all hover:-translate-y-1 whitespace-normal h-auto text-center flex items-center justify-center">
               Explorar Sistemas
             </button>
           </div>

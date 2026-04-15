@@ -29,7 +29,7 @@ export default function SegmentosSection() {
   return (
     <section className="py-24 px-6 lg:px-20 bg-sigma-light" id="quem-atendemos">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-left mb-16">
           <span className="text-sigma-dark/30 font-bold font-body tracking-widest text-sm uppercase mb-6 block">Quem atendemos hoje</span>
           <h2 className="text-4xl md:text-5xl font-black font-display tracking-tight text-sigma-dark">Segmentos que crescem com a SigmaPDV</h2>
         </div>

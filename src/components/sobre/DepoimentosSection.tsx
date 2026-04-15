@@ -28,18 +28,18 @@ const depoimentos = [
 
 export default function DepoimentosSection() {
   return (
-    <section className="py-24 px-6 lg:px-20 bg-sigma-light/30 overflow-hidden" id="depoimentos">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-20 bg-sigma-light/30 overflow-hidden" id="depoimentos">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-left mb-16">
           <span className="text-sigma-dark/30 font-bold font-body tracking-widest text-sm uppercase mb-6 block">
             Relatos de Sucesso
           </span>
-          <h2 className="text-4xl md:text-5xl font-black font-display tracking-tight text-sigma-dark">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-sigma-dark">
             O que dizem quem confia na Sigma
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {depoimentos.map((item, idx) => (
             <motion.div 
               key={idx}

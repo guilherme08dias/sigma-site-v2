@@ -5,17 +5,17 @@ import { Button } from "@/components/ui/Button";
 
 export default function PresencaRegional() {
   return (
-    <section className="py-24 px-6 lg:px-20 bg-sigma-light">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-20 bg-sigma-light">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-[3rem] overflow-hidden shadow-2xl border border-sigma-dark/5 flex flex-col md:flex-row relative"
+          className="bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-sigma-dark/5 flex flex-col md:flex-row relative"
         >
-          <div className="p-12 md:p-16 lg:p-20 flex flex-col justify-center gap-8 z-10 bg-white md:w-1/2">
+          <div className="p-8 sm:p-12 md:p-16 lg:p-20 flex flex-col justify-center gap-8 z-10 bg-white md:w-1/2">
             <div>
-              <h2 className="text-4xl md:text-5xl font-black font-display tracking-tight text-sigma-dark mb-4">Presença regional em todo o Oeste Catarinense</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-sigma-dark mb-4">Presença regional em todo o Oeste Catarinense</h2>
               <p className="text-sigma-dark/70 font-body text-lg leading-relaxed">
                 Sediados em <span className="text-sigma-orange font-bold">Chapecó</span>, atendemos mercados, lojas e empresas em toda a região Oeste de Santa Catarina, com suporte local e visitas presenciais quando necessário.
               </p>
@@ -43,7 +43,7 @@ export default function PresencaRegional() {
             </div>
           </div>
           
-          <div className="md:w-1/2 bg-sigma-dark flex items-center justify-center overflow-hidden min-h-[400px]">
+          <div className="md:w-1/2 bg-sigma-dark flex items-center justify-center overflow-hidden min-h-[250px] sm:min-h-[350px] md:min-h-[400px]">
             <motion.img 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

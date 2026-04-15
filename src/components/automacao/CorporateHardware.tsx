@@ -28,7 +28,7 @@ export default function CorporateHardware() {
   ];
 
   return (
-    <section className="pt-[calc(4rem+2.5rem)] pb-16 bg-sigma-dark text-white relative overflow-hidden rounded-t-[3rem] -mt-10 z-20">
+    <section className="pt-[calc(4rem+2.5rem)] pb-16 bg-sigma-dark text-white relative overflow-hidden rounded-t-[2rem] md:rounded-t-[3rem] -mt-10 z-20">
       
       {/* Background Graphic */}
       <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
@@ -44,8 +44,8 @@ export default function CorporateHardware() {
           
           <div className="lg:col-span-4">
             <span className="text-sigma-cyan font-bold font-body tracking-widest uppercase text-sm">Mais Soluções</span>
-            <h2 className="text-4xl md:text-5xl font-black font-display tracking-tight text-white mt-2 mb-6">Infraestrutura Completa</h2>
-            <p className="text-lg text-white/60 font-body leading-relaxed mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-white mt-2 mb-6">Infraestrutura Completa</h2>
+            <p className="text-base sm:text-lg text-white/60 font-body leading-relaxed mb-8">
               Muito além do caixa: a SigmaPDV fornece e instala toda a base tecnológica necessária para sua loja funcionar com 100% de disponibilidade, segurança e performance.
             </p>
             <a 

@@ -34,7 +34,7 @@ export default function SecullumSection() {
   ];
 
   return (
-    <section className="bg-sigma-dark py-32 px-6 relative z-10 overflow-hidden" id="secullum">
+    <section className="bg-sigma-dark py-20 md:py-32 px-4 sm:px-6 relative z-10 overflow-hidden" id="secullum">
       <div className="max-w-7xl mx-auto">
         
         {/* Row 1: Image + Content (Alternated Order) */}
@@ -62,8 +62,8 @@ export default function SecullumSection() {
             className="order-1 lg:order-2"
           >
             <span className="text-sigma-orange font-bold font-body tracking-widest text-sm uppercase mb-4 block">Controle e Acesso</span>
-            <h2 className="text-4xl md:text-5xl leading-tight font-black font-display tracking-tight text-white mb-6">Inteligência em Controle de Jornada e Acesso</h2>
-            <p className="text-white/70 font-body text-xl leading-relaxed max-w-xl">Cuidar da sua equipe e da segurança da sua empresa exige precisão e as ferramentas certas. Com a tecnologia Secullum, você simplifica o controle de ponto e jornada em total conformidade com a Portaria 671, eliminando burocracias no RH. Mais do que registrar horários, nossa solução traz inteligência e segurança máxima para o fluxo de pessoas. Garanta uma gestão transparente e moderna, onde a praticidade do aplicativo se une ao controle absoluto da sua operação.</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-black font-display tracking-tight text-white mb-6">Inteligência em Controle de Jornada e Acesso</h2>
+            <p className="text-white/70 font-body text-base sm:text-lg md:text-xl leading-relaxed max-w-xl">Cuidar da sua equipe e da segurança da sua empresa exige precisão e as ferramentas certas. Com a tecnologia Secullum, você simplifica o controle de ponto e jornada em total conformidade com a Portaria 671, eliminando burocracias no RH. Mais do que registrar horários, nossa solução traz inteligência e segurança máxima para o fluxo de pessoas. Garanta uma gestão transparente e moderna, onde a praticidade do aplicativo se une ao controle absoluto da sua operação.</p>
           </motion.div>
         </div>
 
@@ -72,21 +72,21 @@ export default function SecullumSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24 relative z-10"
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-24 relative z-10"
         >
           {topics.map((topic, index) => (
-            <div key={index} className="flex items-start gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 h-full hover:border-sigma-orange/30 transition-all group">
+            <div key={index} className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 p-5 sm:p-6 rounded-3xl bg-white/5 border border-white/10 h-full hover:border-sigma-orange/30 transition-all group">
               <span className="material-symbols-outlined text-sigma-orange text-3xl group-hover:scale-110 transition-transform">{topic.icon}</span>
               <div>
-                <h3 className="font-bold font-display text-white text-lg">{topic.title}</h3>
-                <p className="text-sm font-body text-white/50">{topic.desc}</p>
+                <h3 className="font-bold font-display text-white text-base sm:text-lg mb-1 sm:mb-0">{topic.title}</h3>
+                <p className="text-xs sm:text-sm font-body text-white/50 leading-relaxed">{topic.desc}</p>
               </div>
             </div>
           ))}
         </motion.div>
 
         {/* Row 3: Plans Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-20 relative z-10">
           {plans.map((plan, index) => (
             <motion.div 
               key={index}
@@ -94,17 +94,17 @@ export default function SecullumSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`bg-white/5 backdrop-blur-sm p-10 rounded-3xl flex flex-col h-full transition-all duration-300 hover:-translate-y-2 relative text-white ${plan.highlight ? 'border-2 border-sigma-orange shadow-[0_0_30px_rgba(255,102,0,0.2)]' : 'border border-white/10'}`}
+              className={`bg-white/5 backdrop-blur-sm p-6 sm:p-10 rounded-3xl flex flex-col h-full transition-all duration-300 hover:-translate-y-2 relative text-white ${plan.highlight ? 'border-2 border-sigma-orange shadow-[0_0_30px_rgba(255,102,0,0.2)]' : 'border border-white/10'}`}
             >
               {plan.tag && (
                 <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-sigma-orange text-white px-6 py-2 rounded-full text-xs font-bold font-body uppercase tracking-widest shadow-lg shadow-sigma-orange/20">{plan.tag}</span>
               )}
-              <h4 className="text-2xl font-bold mb-4 font-display">{plan.name}</h4>
-              <div className="text-4xl font-black mb-8 font-display tracking-tight">{plan.price}</div>
-              <ul className="space-y-4 mb-8 flex-grow">
+              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-display">{plan.name}</h4>
+              <div className="text-3xl sm:text-4xl font-black mb-6 sm:mb-8 font-display tracking-tight leading-none">{plan.price}</div>
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-4 text-white/70 font-body">
-                    <span className="material-symbols-outlined text-sigma-orange text-2xl">check_circle</span> {feature}
+                  <li key={idx} className="flex items-center gap-3 sm:gap-4 text-white/70 font-body text-sm sm:text-base">
+                    <span className="material-symbols-outlined text-sigma-orange text-xl sm:text-2xl">check_circle</span> {feature}
                   </li>
                 ))}
               </ul>
@@ -112,8 +112,8 @@ export default function SecullumSection() {
           ))}
         </div>
 
-        <div className="flex justify-center relative z-10">
-          <Button size="xl" variant="primary">
+        <div className="flex justify-center relative z-10 w-full">
+          <Button size="xl" variant="primary" className="w-full sm:w-auto h-auto py-4 sm:py-0 px-6 sm:px-8 text-sm sm:text-base whitespace-normal text-center">
             Agendar Demonstração Técnica
           </Button>
         </div>

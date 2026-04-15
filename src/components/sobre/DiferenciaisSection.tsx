@@ -32,7 +32,7 @@ const diferenciais = [
 
 export default function DiferenciaisSection() {
   return (
-    <section className="py-32 px-6 lg:px-20 bg-white" id="diferenciais">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-20 bg-white" id="diferenciais">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
         
         {/* Coluna da Esquerda - Título Sticky */}
@@ -40,7 +40,7 @@ export default function DiferenciaisSection() {
           <span className="text-sigma-dark/30 font-bold font-body tracking-widest text-sm uppercase mb-6 block">
             Por que escolher a SigmaPDV
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-display tracking-tight text-sigma-dark leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-display tracking-tight text-sigma-dark leading-[1.1]">
             Nossos diferenciais estrategicamente pensados
           </h2>
           <p className="mt-8 text-sigma-dark/60 text-lg font-body leading-relaxed max-w-sm">

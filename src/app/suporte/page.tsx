@@ -14,7 +14,9 @@ export default function SuportePage() {
   return (
     <div className="bg-sigma-light">
       <SuporteHero />
-      <SuporteCanais />
+      <div id="canais">
+        <SuporteCanais />
+      </div>
       <AcessoRemoto />
       <DownloadsGrid />
       <SuporteCTA />

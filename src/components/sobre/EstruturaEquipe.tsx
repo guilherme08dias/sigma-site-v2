@@ -38,7 +38,7 @@ export default function EstruturaEquipe() {
     <section className="py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
-        <div className="mb-20 text-center lg:text-left">
+        <div className="mb-20 text-left">
           <h2 className="text-5xl md:text-7xl font-black font-display text-sigma-dark tracking-tighter mb-4">
             Gente que cuida de gente.
           </h2>

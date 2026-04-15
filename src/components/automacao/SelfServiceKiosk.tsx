@@ -111,7 +111,7 @@ export default function SelfServiceKiosk() {
             </div>
 
             <div className="p-8 lg:p-12 flex flex-col justify-center bg-transparent">
-              <h3 className="text-3xl font-bold mb-6 font-display text-sigma-dark tracking-tight">Variações e Especificações</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 font-display text-sigma-dark tracking-tight">Variações e Especificações</h3>
               <ul className="space-y-6 flex-1">
                 <li className="flex items-start gap-4 p-4 rounded-3xl transition-colors hover:bg-sigma-orange/5">
                   <span className="material-symbols-outlined text-sigma-orange p-3 bg-sigma-orange/10 rounded-2xl">android</span>

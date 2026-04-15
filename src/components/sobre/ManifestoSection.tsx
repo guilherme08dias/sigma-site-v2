@@ -38,7 +38,7 @@ export default function ManifestoSection() {
   ];
 
   return (
-    <section className="py-24 px-6 lg:px-20 bg-sigma-light" id="o-que-fazemos">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-20 bg-sigma-light" id="o-que-fazemos">
       <div className="max-w-7xl mx-auto">
         <div className="mb-24">
           <span className="text-sigma-dark/30 font-bold font-body tracking-widest uppercase text-sm block mb-6">O que fazemos</span>

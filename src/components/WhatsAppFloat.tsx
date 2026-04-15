@@ -67,7 +67,7 @@ export default function WhatsAppFloat() {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-3">
       <AnimatePresence>
         {open && (
           <motion.div
@@ -126,7 +126,7 @@ export default function WhatsAppFloat() {
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 20, scale: 0.8 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="bg-white rounded-2xl rounded-br-sm shadow-lg border border-sigma-dark/5 px-4 py-3 max-w-[200px] cursor-pointer"
+              className="bg-white rounded-2xl rounded-br-sm shadow-lg border border-sigma-dark/5 px-3 py-2 sm:px-4 sm:py-3 max-w-[180px] sm:max-w-[200px] cursor-pointer"
               onClick={() => { setShowBubble(false); setOpen(true); }}
             >
               <p className="text-xs font-bold text-[#25D366] font-display tracking-tight mb-0.5">SigmaPDV</p>
@@ -139,7 +139,7 @@ export default function WhatsAppFloat() {
 
         <button
           onClick={() => setOpen(!open)}
-          className={`w-16 h-16 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shrink-0 ${
+          className={`w-14 h-14 md:w-16 md:h-16 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shrink-0 ${
             open
               ? "bg-sigma-dark shadow-sigma-dark/30"
               : "bg-[#25D366] shadow-[#25D366]/40 hover:shadow-[#25D366]/60"
