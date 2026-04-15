@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sigmapdv.com.br"),
   title: "SigmaPDV | Sistemas de Gestão e Automação Comercial no Oeste SC",
   description: "Soluções completas em automação comercial para o varejo. Sistemas de gestão, equipamentos PDV, controle de condomínio e suporte técnico em Chapecó e região.",
+  icons: {
+    icon: "/faviconSigma.svg",
+    apple: "/favicon.jpg",
+  },
   openGraph: {
     title: "SigmaPDV | Automação Comercial em Chapecó e Região",
     description: "Sistemas Uniplus, controle de ponto Secullum, equipamentos PDV, infraestrutura de TI e suporte técnico.",
